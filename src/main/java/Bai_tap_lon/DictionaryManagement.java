@@ -48,7 +48,7 @@ public class DictionaryManagement {
         }
     }
 
-    //Choose 3
+    //Choose 4
     public void showAllWords() {
         //Sort theo alphabet
         Collections.sort(words, new Comparator_Word());
