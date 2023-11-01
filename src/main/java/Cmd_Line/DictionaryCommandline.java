@@ -52,10 +52,20 @@ public class DictionaryCommandline {
                     dicManage.showAllWords();
                     break;
                 case 5:
+                    dicManage.lookUpWords();
+                    break;
                 case 6:
+                    dicManage.searchWords();
+                    break;
                 case 7:
+
+                    break;
                 case 8:
+                    dicManage.importFromFile();
+                    break;
                 case 9:
+                    dicManage.exportToFile();
+                    break;
                 default:
                     System.out.println("Action not supported\n" +
                             "------------------------------");
