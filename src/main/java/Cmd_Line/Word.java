@@ -4,7 +4,10 @@ public class Word {
     private String target;
     private String explain;
 
-    public Word(){};
+    public Word(){
+        target="";
+        explain="";
+    };
 
     public Word(String target, String explain) {
         this.target = target;

@@ -167,11 +167,10 @@ public class DictionaryManagement extends Dictionary {
     public void importFromFile() {
         try {
             System.out.println("Import the file path: ");
-            BufferedReader bufferedReader = new BufferedReader(new FileReader("dictionaries.txt"));
+            BufferedReader bufferedReader = new BufferedReader(new FileReader("D:\\Desktop\\Oasis java OOP\\src\\main\\java\\Cmd_Line\\dictionaries.txt"));
             String line;
             Word newWord = new Word();
             while ((line = bufferedReader.readLine()) != null) {
-                System.out.println("HAHA");
                 if (line.contains("|")) {
                     if (!newWord.getExplain().isEmpty() && !newWord.getTarget().isEmpty() ) {
                         words.add(newWord);
@@ -179,7 +178,7 @@ public class DictionaryManagement extends Dictionary {
                     }
                     newWord.setTarget(line.substring(1));
                 } else {
-                    newWord.setExplain(line);
+                    newWord.setExplain(newWord.getExplain()+line);
                 }
             }
             bufferedReader.close();
