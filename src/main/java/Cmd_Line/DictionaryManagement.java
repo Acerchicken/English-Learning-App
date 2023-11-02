@@ -6,8 +6,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class DictionaryManagement {
-    private ArrayList<Word> words;
+public class DictionaryManagement extends Dictionary {
     Small_Function Func = new Small_Function();
     Scanner scanner = new Scanner(System.in);
 
@@ -27,7 +26,7 @@ public class DictionaryManagement {
                 Dictionary.addWord(word);
             }
 
-            System.out.println("You have successfully added" + numberWords + " words.\n\n\n");
+            System.out.println("You have successfully added " + numberWords + " words.\n\n\n");
         } catch (Exception e) {
             System.out.println("Action 1 cannot completed");
         }
@@ -139,8 +138,8 @@ public class DictionaryManagement {
     }
 
     //Choose 6
-    public void searchWords(){
-        try{
+    public void searchWords() {
+        try {
             System.out.println("Enter the word you want to search: ");
             String target = scanner.nextLine();
 
@@ -159,33 +158,29 @@ public class DictionaryManagement {
                 System.out.println("Word not found.");
             }
 
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println("Action 6 cannot completed");
         }
     }
 
     //Choose 8
-    public void importFromFile(){
+    public void importFromFile() {
         try {
             System.out.println("Import the file path: ");
-            String path = scanner.nextLine();
-            FileReader fileReader = new FileReader(path);
-            BufferedReader bufferedReader = new BufferedReader(fileReader);
-            String englishWord = bufferedReader.readLine();
-            englishWord = englishWord.replace("|", "");
+            BufferedReader bufferedReader = new BufferedReader(new FileReader("dictionaries.txt"));
             String line;
+            Word newWord = new Word();
             while ((line = bufferedReader.readLine()) != null) {
-                Word word = new Word();
-                word.setTarget(englishWord.trim());
-                String meaning = line + "\n";
-                while ((line = bufferedReader.readLine()) != null)
-                    if (!line.startsWith("|")) meaning += line + "\n";
-                    else {
-                        englishWord = line.replace("|", "");
-                        break;
+                System.out.println("HAHA");
+                if (line.contains("|")) {
+                    if (!newWord.getExplain().isEmpty() && !newWord.getTarget().isEmpty() ) {
+                        words.add(newWord);
+                        newWord = new Word();
                     }
-                word.setExplain(meaning.trim());
-                words.add(word);
+                    newWord.setTarget(line.substring(1));
+                } else {
+                    newWord.setExplain(line);
+                }
             }
             bufferedReader.close();
         } catch (IOException e) {
@@ -196,7 +191,7 @@ public class DictionaryManagement {
     }
 
     //Choose 9
-    public void exportToFile(){
+    public void exportToFile() {
         try {
             System.out.println("Export the file to the path: ");
             String path = scanner.nextLine();
@@ -212,7 +207,6 @@ public class DictionaryManagement {
         }
     }
 }
-
 
 //try{
 //
