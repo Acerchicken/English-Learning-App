@@ -1,12 +1,11 @@
 package com.example.dictionary.Controllers;
 
-import Cmd_Line.DictionaryManagement;
+import com.example.dictionary.Models.DictionaryManagement;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.text.Text;
 
 public class SearchController extends DictionaryManagement {
     @FXML
