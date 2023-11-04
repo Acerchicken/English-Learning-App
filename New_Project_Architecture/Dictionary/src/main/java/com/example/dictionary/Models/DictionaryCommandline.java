@@ -56,8 +56,8 @@ public class DictionaryCommandline {
                     break;
                 case 6:
                     System.out.println("Enter the word you want to search: ");
-                    String targetWord = scanner.nextLine();
-                    StringBuilder testResult = dicManage.searchWords(targetWord);
+                    String searchedWord = scanner.nextLine();
+                    StringBuilder testResult = dicManage.searchWords(searchedWord);
                     System.out.println(testResult);
                     break;
                 case 7:

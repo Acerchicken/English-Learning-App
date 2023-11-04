@@ -22,6 +22,7 @@ public class DictionaryManagement extends Dictionary {
                 String explain = scanner.nextLine();
                 Word word = new Word(target, explain);
                 Dictionary.addWord(word);
+                words.add(word);
             }
 
             System.out.println("You have successfully added " + numberWords + " words.\n\n\n");
@@ -42,7 +43,7 @@ public class DictionaryManagement extends Dictionary {
             System.out.println("These is the word(s) that you may want to delete:");
             Func.displayList(selectedWords);
 
-            System.out.println("Select the words you want to delete (options separated by spaces, choose 0 if want to cancel): ");
+            System.out.println("Select the words you want to delete (options separated by spaces, choose 0 if you want to cancel): ");
             String[] indices = scanner.nextLine().split(" ");
 
             for (String indexStr : indices) {
@@ -77,7 +78,7 @@ public class DictionaryManagement extends Dictionary {
 
             System.out.println("Select option: 0(Cancel) 1(Update English) 2(Update Vietnamese): 3(Update All)");
             int choice = scanner.nextInt();
-
+            scanner.nextLine();
             if (index > 0 && index <= selectedWords.size()) {
                 String newTarget, newExplain;
                 switch (choice) {
@@ -161,8 +162,7 @@ public class DictionaryManagement extends Dictionary {
     //Choose 8
     public void importFromFile() {
         try {
-            System.out.println("Import the file path: ");
-            BufferedReader bufferedReader = new BufferedReader(new FileReader("D:\\Java\\Dictionary\\src\\main\\resources\\com\\example\\dictionary\\Database\\dictionaries.txt"));
+            BufferedReader bufferedReader = new BufferedReader(new FileReader("/Users/mac/Documents/GitHub/English-Learning-App/New_Project_Architecture/Dictionary/src/main/resources/com/example/dictionary/Database/dictionaries.txt"));
             String line;
             Word newWord = new Word();
             while ((line = bufferedReader.readLine()) != null) {
@@ -187,8 +187,7 @@ public class DictionaryManagement extends Dictionary {
     //Choose 9
     public void exportToFile() {
         try {
-            System.out.println("Export the file to the path: ");
-            String path = scanner.nextLine();
+            String path = "/Users/mac/Documents/GitHub/English-Learning-App/New_Project_Architecture/Dictionary/src/main/resources/com/example/dictionary/Database/dictionaries.txt";
             FileWriter fileWriter = new FileWriter(path);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
             for (Word word : words) {
