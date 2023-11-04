@@ -9,13 +9,9 @@ public class DictionaryManagement extends Dictionary {
     Scanner scanner = new Scanner(System.in);
 
     //Choose 1
-    public void insertFromCommandLine() {
+    public void insertFromCommandLine(int numberOfWords) {
         try {
-            System.out.println("Enter the number of words: ");
-            int numberWords = scanner.nextInt();
-            scanner.nextLine();
-
-            for (int i = 0; i < numberWords; i++) {
+            for (int i = 0; i < numberOfWords; i++) {
                 System.out.println("Enter English word " + (i + 1) + ": ");
                 String target = scanner.nextLine();
                 System.out.println("Enter Vietnamese meaning: ");
@@ -24,19 +20,15 @@ public class DictionaryManagement extends Dictionary {
                 Dictionary.addWord(word);
                 words.add(word);
             }
-
-            System.out.println("You have successfully added " + numberWords + " words.\n\n\n");
+            System.out.println("You have successfully added " + numberOfWords + " words.\n\n\n");
         } catch (Exception e) {
             System.out.println("Action 1 cannot completed");
         }
     }
 
     //Choose 2
-    public void removeWord() {
+    public void removeWord(String target) {
         try {
-            System.out.println("Enter the word to remove: ");
-            String target = scanner.nextLine();
-
             ArrayList<Word> selectedWords = Func.lookUpWord(words, target);
 
             //In ra danh sach tu co the xoa sau khi search
@@ -63,11 +55,9 @@ public class DictionaryManagement extends Dictionary {
     }
 
     //Choose 3
-    public void updateWord() {
+    public void updateWord(String targetWord) {
         try {
-            System.out.println("Enter the word you want to update: ");
-            String target = scanner.nextLine();
-            ArrayList<Word> selectedWords = Func.lookUpWord(words, target);
+            ArrayList<Word> selectedWords = Func.lookUpWord(words, targetWord);
 
             //In ra danh sach tu co the xoa sau khi search
             System.out.println("These is the word(s) that you may want to update:");

@@ -40,13 +40,20 @@ public class DictionaryCommandline {
                     System.exit(0);
                     break;
                 case 1:
-                    dicManage.insertFromCommandLine();
+                    System.out.println("Enter the number of words: ");
+                    int numberOfWords = scanner.nextInt();
+                    scanner.nextLine();
+                    dicManage.insertFromCommandLine(numberOfWords);
                     break;
                 case 2:
-                    dicManage.removeWord();
+                    System.out.println("Enter the word to remove: ");
+                    String target = scanner.nextLine();
+                    dicManage.removeWord(target);
                     break;
                 case 3:
-                    dicManage.updateWord();
+                    System.out.println("Enter the word you want to update: ");
+                    String targetWord = scanner.nextLine();
+                    dicManage.updateWord(targetWord);
                     break;
                 case 4:
                     dicManage.showAllWords();
