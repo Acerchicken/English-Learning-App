@@ -163,7 +163,11 @@ public class DictionaryManagement extends Dictionary {
     //Choose 8
     public void importFromFile() {
         try {
+<<<<<<< Updated upstream
             BufferedReader bufferedReader = new BufferedReader(new FileReader("D:\\Github Place\\English-Learning-App\\New_Project_Architecture\\Dictionary\\src\\main\\resources\\com\\example\\dictionary\\Database\\dictionaries.txt"));
+=======
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(String.valueOf(getClass().getResource("D:\\Github Place\\English-Learning-App\\New_Project_Architecture\\Dictionary\\src\\main\\resources\\com\\example\\dictionary\\Database\\dictionaries.txt"))));
+>>>>>>> Stashed changes
             String line;
             Word newWord = new Word();
             while ((line = bufferedReader.readLine()) != null) {
