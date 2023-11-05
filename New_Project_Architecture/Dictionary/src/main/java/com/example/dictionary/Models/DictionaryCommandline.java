@@ -53,7 +53,7 @@ public class DictionaryCommandline {
                 case 3:
                     System.out.println("Enter the word you want to update: ");
                     String targetWord = scanner.nextLine();
-                    dicManage.updateWord(targetWord);
+//                    dicManage.updateWord(targetWord);
                     break;
                 case 4:
                     dicManage.showAllWords();
@@ -64,8 +64,7 @@ public class DictionaryCommandline {
                 case 6:
                     System.out.println("Enter the word you want to search: ");
                     String searchedWord = scanner.nextLine();
-                    StringBuilder testResult = dicManage.searchWords(searchedWord);
-                    System.out.println(testResult);
+
                     break;
                 case 7:
 

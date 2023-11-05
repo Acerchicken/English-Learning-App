@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.dictionary.Controllers.GameController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.Controllers.SettingController">
+   <children>
+      <Button fx:id="updateButton" layoutX="513.0" layoutY="193.0" mnemonicParsing="false" onAction="#update" prefHeight="26.0" prefWidth="46.0" text="Sửa" />
+      <TextField fx:id="wordTargetTextField" layoutX="67.0" layoutY="90.0" />
+      <TextField fx:id="wordExplainTextField" layoutX="238.0" layoutY="90.0" prefHeight="232.0" prefWidth="269.0" />
+      <Button fx:id="removeButton" layoutX="513.0" layoutY="237.0" mnemonicParsing="false" onAction="#remove" prefHeight="26.0" prefWidth="46.0" text="Xóa" />
+      <Button fx:id="searchButton" layoutX="513.0" layoutY="89.0" mnemonicParsing="false" onAction="#search" prefHeight="26.0" prefWidth="46.0" text="Tìm" />
+      <Button fx:id="addButton" layoutX="513.0" layoutY="142.0" mnemonicParsing="false" onAction="#add" prefHeight="26.0" prefWidth="46.0" text="Thêm" />
+   </children>
 </AnchorPane>
