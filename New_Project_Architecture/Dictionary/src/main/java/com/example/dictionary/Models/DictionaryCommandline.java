@@ -59,7 +59,7 @@ public class DictionaryCommandline {
                     dicManage.showAllWords();
                     break;
                 case 5:
-                    dicManage.lookUpWords();
+//                    dicManage.lookUpWords();
                     break;
                 case 6:
                     System.out.println("Enter the word you want to search: ");

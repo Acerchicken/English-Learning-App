@@ -9,16 +9,15 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class Application extends javafx.application.Application {
-    private DictionaryManagement dic = new DictionaryManagement();
     public static void main(String[] args) {
         launch(args);
     }
-
+    DictionaryManagement dic = new DictionaryManagement();
     @Override
     public void start(Stage primaryStage) throws IOException {
         try {
             dic.importFromFile();
-            Parent root = FXMLLoader.load(getClass().getResource("Views/SettingView.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("Views/SearchView.fxml"));
             Scene scene = new Scene(root);
             primaryStage.setScene(scene);
             primaryStage.show();

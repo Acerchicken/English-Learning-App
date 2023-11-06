@@ -123,19 +123,19 @@ public class DictionaryManagement extends Dictionary {
     }
 
     //Choose 5
-    public void lookUpWords() {
-        try {
-            System.out.println("Enter the word you want to look up: ");
-            String target = scanner.nextLine();
-            ArrayList<Word> selectedWords = Func.lookUpWord(words, target);
-
-            //In ra danh sach tu sau khi search
-            System.out.println("These is the word(s) that you may want to see:");
-            Func.displayList(selectedWords);
-        } catch (Exception e) {
-            System.out.println("Action 5 cannot completed");
-        }
-    }
+//    public void lookUpWords() {
+//        try {
+//            System.out.println("Enter the word you want to look up: ");
+//            String target = scanner.nextLine();
+//            ArrayList<Word> selectedWords = Func.lookUpWord(words, target);
+//
+//            //In ra danh sach tu sau khi search
+//            System.out.println("These is the word(s) that you may want to see:");
+//            Func.displayList(selectedWords);
+//        } catch (Exception e) {
+//            System.out.println("Action 5 cannot completed");
+//        }
+//    }
 
     //Choose 6
     public Word searchWords(String targetWord) {
@@ -163,11 +163,10 @@ public class DictionaryManagement extends Dictionary {
     //Choose 8
     public void importFromFile() {
         try {
-<<<<<<< Updated upstream
+
             BufferedReader bufferedReader = new BufferedReader(new FileReader("D:\\Github Place\\English-Learning-App\\New_Project_Architecture\\Dictionary\\src\\main\\resources\\com\\example\\dictionary\\Database\\dictionaries.txt"));
-=======
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(String.valueOf(getClass().getResource("D:\\Github Place\\English-Learning-App\\New_Project_Architecture\\Dictionary\\src\\main\\resources\\com\\example\\dictionary\\Database\\dictionaries.txt"))));
->>>>>>> Stashed changes
+
+
             String line;
             Word newWord = new Word();
             while ((line = bufferedReader.readLine()) != null) {

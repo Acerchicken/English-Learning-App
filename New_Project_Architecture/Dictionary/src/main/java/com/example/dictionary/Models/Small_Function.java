@@ -5,11 +5,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Small_Function {
-    public ArrayList<Word> lookUpWord(ArrayList<Word> root, String key){
-        ArrayList<Word> lookUp = new ArrayList<>();
+    public ArrayList<String> lookUpWord(ArrayList<Word> root, String key){
+        ArrayList<String> lookUp = new ArrayList<>();
         for(Word word : root){
             if(word.getTarget().contains(key)){
-                lookUp.add(word);
+                lookUp.add(word.getTarget());
             }
         }
         return lookUp;
