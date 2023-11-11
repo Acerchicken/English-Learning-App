@@ -3,6 +3,8 @@ package com.example.dictionary.Controllers;
 import com.example.dictionary.Application;
 import com.example.dictionary.Models.Small_Function;
 import com.example.dictionary.Models.Word;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -79,6 +81,15 @@ public class MainAppController extends Application implements Initializable {
                 @Override
                 public void handle(KeyEvent keyEvent) {
                     updateListView();
+                }
+            });
+            // chọn từ trong list view
+            wordListView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+                @Override
+                public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                    wordTarget = wordListView.getSelectionModel().getSelectedItem();
+                    wordExplain = getDic().searchWords(wordTarget).getExplain();
+                    wordExplainLabel.setText(String.valueOf(wordExplain));
                 }
             });
         }
