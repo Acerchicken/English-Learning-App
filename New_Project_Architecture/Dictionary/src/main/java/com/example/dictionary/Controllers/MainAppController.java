@@ -36,8 +36,8 @@ public class MainAppController extends Application implements Initializable {
     @FXML
     private ListView<String> wordListView;
     @FXML
-    private String wordTarget;
-    private String wordExplain;
+    private static String wordTarget;
+    private static String wordExplain;
 
     private ArrayList<String> listTarget;
 
@@ -48,6 +48,15 @@ public class MainAppController extends Application implements Initializable {
     // CÁC ATTRIBUTE CHO SWITCH SCENE
     @FXML Button addWordButton;
     private Stage stage;
+
+    public static String getWordTarget() {
+        return wordTarget;
+    }
+
+    public static String getWordExplain() {
+        return wordExplain;
+    }
+
     private Scene scene;
 
     //lấy từ vựng được nhập trong thanh search, tìm kiếm và trả về nghĩa của từ đó trên wordExplainLabel
@@ -84,6 +93,15 @@ public class MainAppController extends Application implements Initializable {
 
     public void switchToAddScene(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Views/AddView.fxml"));
+        // Lấy stage hiện tại
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void switchToUpdateScene(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Views/UpdateView.fxml"));
         // Lấy stage hiện tại
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
