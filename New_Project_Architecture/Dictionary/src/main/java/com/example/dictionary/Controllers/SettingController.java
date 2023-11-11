@@ -1,14 +1,10 @@
 package com.example.dictionary.Controllers;
 
 import com.example.dictionary.Application;
-import com.example.dictionary.Models.DictionaryManagement;
-import com.example.dictionary.Models.Word;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-
-import java.io.BufferedReader;
 
 public class SettingController extends Application {
     @FXML

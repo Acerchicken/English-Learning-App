@@ -1,7 +1,9 @@
 package com.example.dictionary;
 
 import com.example.dictionary.Models.DictionaryManagement;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -12,12 +14,14 @@ public class Application extends javafx.application.Application {
     public static void main(String[] args) {
         launch(args);
     }
+
     DictionaryManagement dic = new DictionaryManagement();
+
     @Override
     public void start(Stage primaryStage) throws IOException {
         try {
             dic.importFromFile();
-            Parent root = FXMLLoader.load(getClass().getResource("Views/SearchView.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("Controllers/Views/MainAppView.fxml"));
             Scene scene = new Scene(root);
             primaryStage.setScene(scene);
             primaryStage.show();
