@@ -35,7 +35,6 @@ public class DictionaryManagement extends Dictionary {
             DictionaryManagement dic = new DictionaryManagement();
             Word removeWord = dic.searchWords(target);
             words.remove(removeWord);
-            exportToFile();
 //            ArrayList<Word> selectedWords = Func.lookUpWord(words, target);
 //
 //            //In ra danh sach tu co the xoa sau khi search
@@ -67,7 +66,6 @@ public class DictionaryManagement extends Dictionary {
         try {
             Word updateWord = searchWords(wordTarget);
             updateWord.setExplain(wordExplain);
-            exportToFile();
 //            ArrayList<Word> selectedWords = Func.lookUpWord(words, targetWord);
 //
 //            //In ra danh sach tu co the xoa sau khi search

@@ -23,7 +23,7 @@
       <Button fx:id="searchButton" layoutX="304.0" layoutY="38.0" mnemonicParsing="false" onAction="#search" prefHeight="46.0" prefWidth="70.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="Search" textFill="WHITE" />
       <ListView fx:id="wordListView" layoutX="165.0" layoutY="106.0" prefHeight="446.0" prefWidth="210.0" style="-fx-background-color: #F5EEC8;" />
       <Button fx:id="addWordButton" layoutX="611.0" layoutY="38.0" mnemonicParsing="false" onAction="#switchToAddScene" prefHeight="46.0" prefWidth="113.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="New Word" textFill="WHITE" />
-      <Button fx:id="searchButton11" layoutX="741.0" layoutY="38.0" mnemonicParsing="false" onAction="#search" prefHeight="46.0" prefWidth="114.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="Remove Word" textFill="WHITE" />
+      <Button fx:id="removeButton" layoutX="741.0" layoutY="38.0" mnemonicParsing="false" onAction="#remove" prefHeight="46.0" prefWidth="114.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="Remove Word" textFill="WHITE" />
       <Button fx:id="updateButton" layoutX="786.0" layoutY="106.0" mnemonicParsing="false" onAction="#switchToUpdateScene" prefHeight="46.0" prefWidth="70.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="Change" textFill="WHITE" />
    </children>
 </AnchorPane>

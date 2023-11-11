@@ -37,6 +37,7 @@ public class MainAppController extends Application implements Initializable {
     private ListView<String> wordListView;
     @FXML
     private static String wordTarget;
+    @FXML
     private static String wordExplain;
 
     private ArrayList<String> listTarget;
@@ -45,9 +46,12 @@ public class MainAppController extends Application implements Initializable {
 
     private Small_Function sf = new Small_Function();
 
-    // CÁC ATTRIBUTE CHO SWITCH SCENE
+    // CÁC ATTRIBUTE CHO SWITCH SCENE, REMOVE WORD
     @FXML Button addWordButton;
+    @FXML Button updateButton;
+    @FXML Button removeButton;
     private Stage stage;
+
 
     public static String getWordTarget() {
         return wordTarget;
@@ -107,5 +111,12 @@ public class MainAppController extends Application implements Initializable {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+
+    public void remove(ActionEvent event) {
+        getDic().removeWord(wordTarget);
+        getDic().exportToFile();
+        searchTextField.setText("");
+        wordExplainLabel.setText("");
     }
 }
