@@ -77,7 +77,8 @@ public class MainAppController extends Application implements Initializable {
     // cập nhật lại listView danh sách từ vựng
     public void updateListView() {
         wordListView.getItems().clear();
-        listTarget = sf.lookUpWord(words, searchTextField.getText().trim());
+        listTarget.clear();
+        listTarget = sf.lookUpWord(words, searchTextField.getText());
         wordListView.getItems().addAll(listTarget);
     }
 

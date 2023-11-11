@@ -6,7 +6,6 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #A7D397;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.Controllers.MainAppController">
    <children>
@@ -20,11 +19,7 @@
          </children>
       </VBox>
       <TextField fx:id="searchTextField" layoutX="165.0" layoutY="38.0" onAction="#updateListView" prefHeight="46.0" prefWidth="199.0" style="-fx-background-color: #F5EEC8;" />
-      <Label fx:id="wordExplainLabel" alignment="TOP_LEFT" layoutX="410.0" layoutY="106.0" prefHeight="446.0" prefWidth="446.0" style="-fx-background-color: #F5EEC8;">
-         <font>
-            <Font size="25.0" />
-         </font>
-      </Label>
+      <Label fx:id="wordExplainLabel" alignment="TOP_LEFT" layoutX="410.0" layoutY="106.0" prefHeight="446.0" prefWidth="446.0" style="-fx-background-color: #F5EEC8;" />
       <Button fx:id="searchButton" layoutX="304.0" layoutY="38.0" mnemonicParsing="false" onAction="#search" prefHeight="46.0" prefWidth="70.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="Search" textFill="WHITE" />
       <ListView fx:id="wordListView" layoutX="165.0" layoutY="106.0" prefHeight="446.0" prefWidth="210.0" style="-fx-background-color: #F5EEC8;" />
       <Button fx:id="addWordButton" layoutX="611.0" layoutY="38.0" mnemonicParsing="false" onAction="#switchToAddScene" prefHeight="46.0" prefWidth="113.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="New Word" textFill="WHITE" />

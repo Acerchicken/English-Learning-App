@@ -177,7 +177,7 @@ public class DictionaryManagement extends Dictionary {
                     }
                     newWord.setTarget(line.substring(1));
                 } else {
-                    newWord.setExplain(newWord.getExplain() + line);
+                    newWord.setExplain(newWord.getExplain() + line + "\n");
                 }
             }
             bufferedReader.close();
