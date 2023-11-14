@@ -5,13 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e204b651-a68d-45c9-adc5-3cb5f49ead16" name="Changes" comment="add, remove and update function">
+      <change afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Controllers/AlertController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< Updated upstream
-      <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Models/DictionaryCommandline.java" beforeDir="false" afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Models/DictionaryCommandline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Alerts/New Text Document.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Controllers/AddController.java" beforeDir="false" afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Controllers/AddController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Controllers/MainAppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Controllers/MainAppController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Controllers/UpdateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Controllers/UpdateController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Models/DictionaryManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Models/DictionaryManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/resources/com/example/dictionary/Database/dictionaries.txt" beforeDir="false" afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/resources/com/example/dictionary/Database/dictionaries.txt" afterDir="false" />
-=======
->>>>>>> Stashed changes
+      <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Models/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Models/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Models/Small_Function.java" beforeDir="false" afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Models/Small_Function.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/resources/com/example/dictionary/Controllers/Views/MainAppView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/resources/com/example/dictionary/Controllers/Views/MainAppView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,21 +48,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/Github Place/English-Learning-App/New_Project_Architecture",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Github Place/English-Learning-App/New_Project_Architecture&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Models" />
@@ -64,6 +70,26 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.dictionary" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.dictionary.Application" />
+      <module name="Dictionary" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.dictionary.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Application" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -76,13 +102,11 @@
       <workItem from="1698911101764" duration="1583000" />
       <workItem from="1698915785594" duration="50000" />
       <workItem from="1698915849534" duration="85000" />
-<<<<<<< Updated upstream
       <workItem from="1698918934174" duration="9524000" />
-=======
       <workItem from="1698918934174" duration="7802000" />
       <workItem from="1699084227350" duration="38000" />
       <workItem from="1699084274950" duration="31000" />
->>>>>>> Stashed changes
+      <workItem from="1699980495653" duration="6427000" />
     </task>
     <task id="LOCAL-00001" summary="add, remove and update function">
       <option name="closed" value="true" />

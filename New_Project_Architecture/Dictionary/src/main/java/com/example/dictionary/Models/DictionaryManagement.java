@@ -35,6 +35,7 @@ public class DictionaryManagement extends Dictionary {
             DictionaryManagement dic = new DictionaryManagement();
             Word removeWord = dic.searchWords(target);
             words.remove(removeWord);
+            exportToFile();
 //            ArrayList<Word> selectedWords = Func.lookUpWord(words, target);
 //
 //            //In ra danh sach tu co the xoa sau khi search
@@ -66,6 +67,7 @@ public class DictionaryManagement extends Dictionary {
         try {
             Word updateWord = searchWords(wordTarget);
             updateWord.setExplain(wordExplain);
+            exportToFile();
 //            ArrayList<Word> selectedWords = Func.lookUpWord(words, targetWord);
 //
 //            //In ra danh sach tu co the xoa sau khi search
@@ -138,31 +140,36 @@ public class DictionaryManagement extends Dictionary {
     //Choose 6
     public Word searchWords(String targetWord) {
         Word result = new Word();
-        try {
-            boolean found = false;
+        boolean found = false;
 
-            for (Word word : words) {
-                if (word.getTarget().equalsIgnoreCase(targetWord)) {
-                    result = word;
-                    break;
-                }
+        for (Word word : words) {
+            if (word.getTarget().equalsIgnoreCase(targetWord)) {
+                result = word;
+                found = true;
+                break;
             }
-
-            if (!found) {
-                System.out.println("Word not found.");
-            }
-
-        } catch (Exception e) {
-            System.out.println("Action 6 cannot completed");
+        }
+        if (!found) {
+            result.setTarget(targetWord);
+            result.setExplain("");
+            System.out.println("Word not found.");
         }
         return result;
     }
-
+    public ArrayList<String> lookUpWord(ArrayList<Word> root, String key) {
+        ArrayList<String> lookUp = new ArrayList<>();
+        for (Word word : root) {
+            if (word.getTarget().startsWith(key)) {
+                lookUp.add(word.getTarget());
+            }
+        }
+        return lookUp;
+    }
     //Choose 8
     public void importFromFile() {
         try {
 
-            BufferedReader bufferedReader = new BufferedReader(new FileReader("D:\\Github Place\\English-Learning-App\\New_Project_Architecture\\Dictionary\\src\\main\\resources\\com\\example\\dictionary\\Models\\Database\\dictionaries.txt"));
+            BufferedReader bufferedReader = new BufferedReader(new FileReader("D:\\Java\\English-Learning-App\\New_Project_Architecture\\Dictionary\\src\\main\\resources\\com\\example\\dictionary\\Models\\Database\\dictionaries.txt"));
 
 
             String line;
@@ -189,7 +196,7 @@ public class DictionaryManagement extends Dictionary {
     //Choose 9
     public void exportToFile() {
         try {
-            String path = "D:\\Github Place\\English-Learning-App\\New_Project_Architecture\\Dictionary\\src\\main\\resources\\com\\example\\dictionary\\Models\\Database\\dictionaries.txt";
+            String path = "D:\\Github Place\\English-Learning-App\\New_Project_Architecture\\Dictionary\\src\\main\\resources\\com\\example\\dictionary\\Database\\dictionaries.txt";
             FileWriter fileWriter = new FileWriter(path);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
             for (Word word : words) {

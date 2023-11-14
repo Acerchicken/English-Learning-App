@@ -5,16 +5,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Small_Function {
-    public ArrayList<String> lookUpWord(ArrayList<Word> root, String key) {
-        ArrayList<String> lookUp = new ArrayList<>();
-        for (Word word : root) {
-            if (word.getTarget().startsWith(key)) {
-                lookUp.add(word.getTarget());
-            }
-        }
-        return lookUp;
-    }
-
     public void displayList(ArrayList<Word> words) {
         //Sort theo alphabet
         Collections.sort(words, new SortDictionary());
