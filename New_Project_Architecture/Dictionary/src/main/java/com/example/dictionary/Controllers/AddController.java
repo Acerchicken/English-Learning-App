@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class AddController extends Application {
+public class AddController extends MainAppController {
     @FXML
     private TextField wordTextField;
     @FXML

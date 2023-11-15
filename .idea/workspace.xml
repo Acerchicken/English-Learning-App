@@ -5,19 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e204b651-a68d-45c9-adc5-3cb5f49ead16" name="Changes" comment="add, remove and update function">
-      <change afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Controllers/AlertController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/resources/com/example/dictionary/Controllers/Views/css/UpdateView.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Alerts/New Text Document.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Controllers/AddController.java" beforeDir="false" afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Controllers/AddController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Controllers/MainAppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Controllers/MainAppController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Controllers/AlertController.java" beforeDir="false" afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Controllers/AlertController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Controllers/SettingController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Controllers/UpdateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Controllers/UpdateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Models/DictionaryManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Models/DictionaryManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Models/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Models/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Models/Small_Function.java" beforeDir="false" afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Models/Small_Function.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/resources/com/example/dictionary/Controllers/Views/MainAppView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/resources/com/example/dictionary/Controllers/Views/MainAppView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/resources/com/example/dictionary/Controllers/Views/SettingView.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/resources/com/example/dictionary/Controllers/Views/UpdateView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/resources/com/example/dictionary/Controllers/Views/UpdateView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +55,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -107,6 +103,9 @@
       <workItem from="1699084227350" duration="38000" />
       <workItem from="1699084274950" duration="31000" />
       <workItem from="1699980495653" duration="6427000" />
+      <workItem from="1700029727204" duration="182000" />
+      <workItem from="1700029978801" duration="315000" />
+      <workItem from="1700048592235" duration="1611000" />
     </task>
     <task id="LOCAL-00001" summary="add, remove and update function">
       <option name="closed" value="true" />
@@ -125,5 +124,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add, remove and update function" />
     <option name="LAST_COMMIT_MESSAGE" value="add, remove and update function" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

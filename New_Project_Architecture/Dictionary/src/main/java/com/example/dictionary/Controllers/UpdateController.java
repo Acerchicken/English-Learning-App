@@ -1,6 +1,5 @@
 package com.example.dictionary.Controllers;
 
-import com.example.dictionary.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,19 +8,19 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class UpdateController extends Application implements Initializable {
+public class UpdateController extends MainAppController implements Initializable {
     @FXML
     TextField wordTextField;
     @FXML
-    TextField wordExplainTextField;
+    TextArea wordExplainTextArea;
     @FXML
     Button updateButton;
     @FXML
@@ -32,12 +31,12 @@ public class UpdateController extends Application implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        wordTextField.setText(MainAppController.getWordTarget());
-        wordExplainTextField.setText(MainAppController.getWordExplain());
+        wordTextField.setText(getWordTarget());
+        wordExplainTextArea.setText(getWordExplain());
     }
 
     public void update(ActionEvent event) {
-        getDic().updateWord(wordTextField.getText(), wordExplainTextField.getText());
+        getDic().updateWord(wordTextField.getText(), wordExplainTextArea.getText());
     }
 
     public void switchToAppScene(ActionEvent event) throws IOException {

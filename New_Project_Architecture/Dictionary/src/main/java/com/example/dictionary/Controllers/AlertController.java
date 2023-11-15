@@ -1,8 +1,9 @@
 package com.example.dictionary.Controllers;
 
+import com.example.dictionary.Application;
 import javafx.scene.control.Alert;
 
-public class AlertController {
+public class AlertController extends Application {
     public Alert confirmationAlert(String header, String content) {
         Alert confirmationAlert = new Alert(Alert.AlertType.CONFIRMATION);
         confirmationAlert.setTitle("Confirmation!!!");
