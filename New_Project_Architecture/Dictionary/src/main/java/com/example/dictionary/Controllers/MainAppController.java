@@ -64,33 +64,39 @@ public class MainAppController extends Application implements Initializable {
         wordExplain = getDic().searchWords(wordTarget).getExplain();
         wordExplainLabel.setText(String.valueOf(wordExplain));
         if (wordTarget == null || wordExplain == null || wordTarget.isEmpty() || wordExplain.isEmpty())
-            generalAlert(wordTarget, wordExplain);
+            AlertController.generalAlert(wordTarget, wordExplain);
     }
 
     // khởi tạo listView chứa các từ vựng, khi gõ trên thanh search sẽ nhận keyEvent để cập nhật listView
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        try {
-            listTarget = getDic().lookUpWord(words, searchTextField.getText().trim());
-            searchTextField.setOnKeyTyped(new EventHandler<KeyEvent>() {
-                @Override
-                public void handle(KeyEvent keyEvent) {
-                    updateListView();
-                }
-            });
-            // chọn từ trong list view
-            wordListView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
-                @Override
-                public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
-                    wordTarget = wordListView.getSelectionModel().getSelectedItem();
-                    wordExplain = getDic().searchWords(wordTarget).getExplain();
-                    searchTextField.setText(wordTarget);
-                    wordExplainLabel.setText(String.valueOf(wordExplain));
-                }
-            });
-        } catch (Exception e) {
-            throw e;
+        if (wordTarget != null) {
+            searchTextField.setText(wordTarget);
         }
+        if (wordExplain != null) {
+            wordExplainLabel.setText(wordExplain);
+        }
+        listTarget = getDic().lookUpWord(words, searchTextField.getText().trim());
+        searchTextField.setText(wordTarget);
+        wordExplainLabel.setText(wordExplain);
+        wordListView.getItems().addAll(listTarget);
+        searchTextField.setOnKeyTyped(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent keyEvent) {
+                updateListView();
+            }
+        });
+        // chọn từ trong list view
+        wordListView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                wordTarget = wordListView.getSelectionModel().getSelectedItem();
+                wordExplain = getDic().searchWords(wordTarget).getExplain();
+                searchTextField.setText(wordTarget);
+                wordExplainLabel.setText(String.valueOf(wordExplain));
+            }
+        });
+
     }
 
     // cập nhật lại listView danh sách từ vựng
@@ -111,49 +117,39 @@ public class MainAppController extends Application implements Initializable {
     }
 
     public void switchToUpdateScene(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Views/UpdateView.fxml"));
-        // Lấy stage hiện tại
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        if (wordTarget == null || wordExplain == null || wordTarget.isEmpty() || wordExplain.isEmpty())
+            AlertController.generalAlert(wordTarget, wordExplain);
+        else {
+            System.out.println(getWordTarget().trim());
+            Parent root = FXMLLoader.load(getClass().getResource("Views/UpdateView.fxml"));
+            // Lấy stage hiện tại
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }
     }
 
     public void remove(ActionEvent event) {
-        wordTarget = searchTextField.getText();
         if (wordTarget == null || wordExplain == null || wordTarget.isEmpty() || wordExplain.isEmpty())
-            generalAlert(wordTarget, wordExplain);
+            AlertController.generalAlert(wordTarget, wordExplain);
         else {
-            Alert removeAlert = alertController
+            Alert removeAlert = AlertController
                     .confirmationAlert("Bạn đang xóa từ: " + wordTarget, "Bạn có chắc chắn muốn xóa từ này?");
             if (removeAlert.showAndWait().get() == ButtonType.OK) {
                 getDic().removeWord(wordTarget);
-                searchTextField.setText("");
-                wordExplainLabel.setText("");
+                wordTarget = null;
+                wordExplain = null;
             }
         }
     }
 
     public void exit(ActionEvent event) {
-        Alert exitAlert = alertController
+        Alert exitAlert = AlertController
                 .confirmationAlert("Bạn đang thoát ra!", "Bạn có chắc chắn muốn thoát?");
         if (exitAlert.showAndWait().get() == ButtonType.OK) {
             stage = (Stage) mainPane.getScene().getWindow();
             stage.close();
         }
-    }
-
-    public void generalAlert(String target, String explain) {
-        if (target == null || target.isEmpty()) {
-            Alert warningAlert = alertController
-                    .warningAlert("Bạn chưa nhập từ!", "Vui lòng hãy nhập từ!");
-            warningAlert.showAndWait();
-
-        } else if (explain == null || explain.isEmpty()) {
-            Alert warningAlert = alertController
-                    .warningAlert("Từ không tồn tại!", "Bạn hãy kiểm tra lại từ vựng!");
-            warningAlert.showAndWait();
-        }
-
     }
 }

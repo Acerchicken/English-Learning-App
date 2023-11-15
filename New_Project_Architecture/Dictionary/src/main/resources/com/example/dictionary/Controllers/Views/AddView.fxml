@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
@@ -9,7 +10,6 @@
 <AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #A7D397;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.Controllers.AddController">
    <children>
       <TextField fx:id="wordTextField" layoutX="223.0" layoutY="41.0" prefHeight="43.0" prefWidth="548.0" style="-fx-background-color: #F5EEC8;" />
-      <TextField fx:id="wordExplainTextField" alignment="TOP_LEFT" layoutX="223.0" layoutY="116.0" prefHeight="386.0" prefWidth="548.0" style="-fx-background-color: #F5EEC8;" />
       <Label alignment="CENTER" layoutX="128.0" layoutY="41.0" prefHeight="43.0" prefWidth="94.0" style="-fx-font-weight: bold; -fx-background-color: #495E57;" text="Word" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="23.0" />
@@ -22,5 +22,6 @@
       </Label>
       <Button fx:id="saveButton" layoutX="128.0" layoutY="516.0" mnemonicParsing="false" onAction="#save" prefHeight="43.0" prefWidth="643.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="Save" textFill="WHITE" />
       <Button fx:id="backButton" layoutX="807.0" layoutY="7.0" mnemonicParsing="false" onAction="#switchToAppScene" prefHeight="43.0" prefWidth="86.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="Back" textFill="WHITE" />
+      <TextArea fx:id="wordExplainTextArea" layoutX="223.0" layoutY="116.0" prefHeight="386.0" prefWidth="548.0" />
    </children>
 </AnchorPane>
