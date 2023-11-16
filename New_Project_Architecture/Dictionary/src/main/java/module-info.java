@@ -5,6 +5,8 @@ module com.example.dictionary {
     requires com.google.auth;
     requires com.google.auth.oauth2;
     requires google.cloud.core;
+    requires gtranslateapi;
+    requires freetts;
 
 
     opens com.example.dictionary to javafx.fxml;

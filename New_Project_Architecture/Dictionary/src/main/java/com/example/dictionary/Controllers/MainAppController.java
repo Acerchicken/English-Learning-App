@@ -1,6 +1,10 @@
 package com.example.dictionary.Controllers;
 
 import com.example.dictionary.Application;
+import com.gtranslate.Audio;
+import com.gtranslate.Language;
+import com.sun.speech.freetts.Voice;
+import com.sun.speech.freetts.VoiceManager;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -17,6 +21,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -49,6 +54,7 @@ public class MainAppController extends Application implements Initializable {
     private Stage stage;
     private Scene scene;
     private final AlertController alertController = new AlertController();
+     private Voice voice;
 
     public static String getWordTarget() {
         return wordTarget;
@@ -70,6 +76,7 @@ public class MainAppController extends Application implements Initializable {
     // khởi tạo listView chứa các từ vựng, khi gõ trên thanh search sẽ nhận keyEvent để cập nhật listView
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        voice = VoiceManager.getInstance().getVoice("kevin16");
         if (wordTarget != null) {
             searchTextField.setText(wordTarget);
         }
@@ -152,4 +159,14 @@ public class MainAppController extends Application implements Initializable {
             stage.close();
         }
     }
+
+    public void pronounce(ActionEvent event) {
+        System.setProperty("freetts.voices", "com.sun.speech.freetts.en.us.cmu_us_kal.KevinVoiceDirectory");
+        Voice audio = VoiceManager.getInstance().getVoice("kevin16");
+        if (audio != null) {
+            audio.allocate();
+            audio.speak(searchTextField.getText());
+        } else throw new IllegalStateException("Cannot find voice: kevin16");
+    }
 }
+
