@@ -169,7 +169,7 @@ public class DictionaryManagement extends Dictionary {
     public void importFromFile() {
         try {
 
-            BufferedReader bufferedReader = new BufferedReader(new FileReader("D:\\Java\\English-Learning-App\\New_Project_Architecture\\Dictionary\\src\\main\\resources\\com\\example\\dictionary\\Models\\Database\\dictionaries.txt"));
+            BufferedReader bufferedReader = new BufferedReader(new FileReader("/Users/mac/Documents/GitHub/English-Learning-App/New_Project_Architecture/Dictionary/src/main/resources/com/example/dictionary/Models/Database/dictionaries.txt"));
 
 
             String line;

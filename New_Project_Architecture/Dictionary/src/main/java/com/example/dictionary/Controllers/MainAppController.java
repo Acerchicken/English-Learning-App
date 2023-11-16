@@ -41,6 +41,8 @@ public class MainAppController extends Application implements Initializable {
 
     // CÁC ATTRIBUTE CHO SWITCH SCENE, REMOVE WORD
     @FXML
+    Button sentenceTranslateButton;
+    @FXML
     Button addWordButton;
     @FXML
     Button updateButton;
@@ -128,6 +130,14 @@ public class MainAppController extends Application implements Initializable {
             stage.setScene(scene);
             stage.show();
         }
+    }
+
+    public void switchToSentenceTranslationScene(ActionEvent event) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("Views/TranslationView.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     public void remove(ActionEvent event) {

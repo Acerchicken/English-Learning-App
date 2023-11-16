@@ -5,21 +5,18 @@ import com.google.cloud.translate.Language;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Data {
-    private Map<String, String> allLanguages = new HashMap<>();
+    private Map<String, String> allLanguages = new LinkedHashMap<>();
     private List<String> languageList = new ArrayList<>();
     public Data() {
         try {
-            BufferedReader languageReader = new BufferedReader(new FileReader("src/main/resources/com/example/dictionary/Models/Database/All-Languages.txt"));
+            BufferedReader languageReader = new BufferedReader(new FileReader("/Users/mac/Documents/GitHub/English-Learning-App/New_Project_Architecture/Dictionary/src/main/resources/com/example/dictionary/Models/Database/All-Languages.txt"));
 
             String line;
             while ((line = languageReader.readLine()) != null) {
-                String[] parts = line.split(",");
+                String[] parts = line.split(" ");
 
                 if (parts.length == 2) {
                     String lang = parts[0].trim();
@@ -35,10 +32,14 @@ public class Data {
         }
     }
 
-    public List<String> getLanguageList(Map<String, String> allLanguages) {
+    public List<String> getLanguageList() {
         for (Map.Entry<String, String> entry : allLanguages.entrySet()) {
             languageList.add(entry.getKey());
         }
         return languageList;
+    }
+
+    public String getLanguageIndex(String country) {
+        return allLanguages.get(country);
     }
 }
