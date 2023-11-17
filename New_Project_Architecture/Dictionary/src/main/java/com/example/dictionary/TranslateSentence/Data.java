@@ -12,7 +12,7 @@ public class Data {
     private List<String> languageList = new ArrayList<>();
     public Data() {
         try {
-            BufferedReader languageReader = new BufferedReader(new FileReader("/Users/mac/Documents/GitHub/English-Learning-App/New_Project_Architecture/Dictionary/src/main/resources/com/example/dictionary/Models/Database/All-Languages.txt"));
+            BufferedReader languageReader = new BufferedReader(new FileReader("New_Project_Architecture/Dictionary/src/main/resources/com/example/dictionary/Models/Database/All-Languages.txt"));
 
             String line;
             while ((line = languageReader.readLine()) != null) {
