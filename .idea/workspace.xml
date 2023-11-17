@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e204b651-a68d-45c9-adc5-3cb5f49ead16" name="Changes" comment="add, remove and update function">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/freetts_1_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Game/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Controllers/MainAppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Controllers/MainAppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/resources/freetts-1.2.2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/resources/com/example/dictionary/Audio/freetts-1.2.2.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/resources/gtranslateapi-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/resources/jl1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,31 +40,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/Github Place/English-Learning-App/New_Project_Architecture/Dictionary/src/main/resources/com/example/dictionary/Audio/freetts-1.2.2.jar",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.5321839",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Github Place/English-Learning-App/New_Project_Architecture/Dictionary/src/main/resources/com/example/dictionary/Audio/freetts-1.2.2.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.5321839&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Github Place\English-Learning-App\New_Project_Architecture\Dictionary\src\main\resources\com\example\dictionary\Audio" />
@@ -81,7 +74,7 @@
       <recent name="com.example.dictionary" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Game">
+  <component name="RunManager" selected="Application.Application">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.dictionary.Application" />
       <module name="Dictionary" />
@@ -110,8 +103,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Game" />
         <item itemvalue="Application.Application" />
+        <item itemvalue="Application.Game" />
       </list>
     </recent_temporary>
   </component>
@@ -141,6 +134,7 @@
       <workItem from="1700143258928" duration="419000" />
       <workItem from="1700146368108" duration="1435000" />
       <workItem from="1700200531098" duration="7283000" />
+      <workItem from="1700208759426" duration="652000" />
     </task>
     <task id="LOCAL-00001" summary="add, remove and update function">
       <option name="closed" value="true" />
