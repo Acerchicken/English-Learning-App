@@ -18,7 +18,7 @@ public class Game extends Application {
         int size = words.size();
         while (randomListWord.size() < n) {
             int randomIndex = random.nextInt(Math.abs(size));
-            String randomElement = words.get(randomIndex).getTarget().replace(" ", "").replace("'","").replace("-", "");
+            String randomElement = words.get(randomIndex).getTarget().replace(" ", "").replace("'","").replace("-", "").toUpperCase();
             if (!randomListWord.contains(randomElement)) {
                 randomListWord.add(randomElement);
                 saveWordList.add(words.get(randomIndex));
@@ -115,13 +115,22 @@ public class Game extends Application {
                 }
             }
         }
+        for (int i = 0; i < gridSize; i++) {
+            for (int j = 0; j < gridSize; j++) {
+                if (board[i][j] == '_') {
+                    Random random = new Random();
+                    char c = (char) (random.nextInt(26) + 'A');
+                    board[i][j] = c;
+                }
+            }
+        }
         return board;
     }
 
     public static void main(String[] args) {
         Game g = new Game();
-        ArrayList<String> wordList = g.randomPickWord(3);
-        char[][] gameBoard = g.createGameBoard(wordList, 20);
+        ArrayList<String> wordList = g.randomPickWord(4);
+        char[][] gameBoard = g.createGameBoard(wordList, 13);
         for (int i = 0; i < wordList.size(); i++) {
             System.out.println(wordList.get(i));
         }

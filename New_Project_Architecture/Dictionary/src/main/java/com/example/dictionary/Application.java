@@ -21,7 +21,7 @@ public class Application extends javafx.application.Application {
     public void start(Stage primaryStage) throws IOException {
         try {
             dic.importFromFile();
-            Parent root = FXMLLoader.load(getClass().getResource("Controllers/Views/MainAppView.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("Controllers/Views/GameView.fxml"));
             Scene scene = new Scene(root);
             primaryStage.setScene(scene);
             primaryStage.show();
