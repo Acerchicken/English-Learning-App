@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e204b651-a68d-45c9-adc5-3cb5f49ead16" name="Changes" comment="add, remove and update function">
+
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Controllers/MainAppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Controllers/MainAppController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Controllers/SentenceTranslationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Controllers/SentenceTranslationController.java" afterDir="false" />
@@ -14,6 +15,8 @@
       <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/resources/com/example/dictionary/Controllers/Views/MainAppView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/resources/com/example/dictionary/Controllers/Views/MainAppView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/resources/com/example/dictionary/Controllers/Views/TranslationView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/resources/com/example/dictionary/Controllers/Views/TranslationView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/resources/com/example/dictionary/Models/Database/All-Languages.txt" beforeDir="false" afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/resources/com/example/dictionary/Models/Database/All-Languages.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +26,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaFXApplication" />
         <option value="Class" />
       </list>
     </option>
@@ -40,6 +44,9 @@
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="2XbwUDWu68Bk5Cv9KR5EHqt7POZ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -59,6 +66,29 @@
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
     "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Github Place/English-Learning-App/New_Project_Architecture/Dictionary/src/main/resources/com/example/dictionary/Audio/freetts-1.2.2.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.5321839&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }]]></component>
   <component name="RecentsManager">
@@ -66,6 +96,7 @@
       <recent name="com.example.dictionary.Controllers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Github Place\English-Learning-App\New_Project_Architecture\Dictionary\src\main\resources\com\example\dictionary\Audio" />
       <recent name="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Models" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -92,6 +123,12 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.dictionary.TranslateSentence.*" />
+    <configuration name="Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.dictionary.Game.Game" />
+      <module name="Dictionary" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.dictionary.Game.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -103,6 +140,7 @@
       <list>
         <item itemvalue="Application.Application" />
         <item itemvalue="Application.Data" />
+        <item itemvalue="Application.Game" />
       </list>
     </recent_temporary>
   </component>
@@ -125,6 +163,15 @@
       <workItem from="1700029727204" duration="182000" />
       <workItem from="1700029978801" duration="315000" />
       <workItem from="1700048592235" duration="1611000" />
+      <workItem from="1700048592235" duration="1837000" />
+      <workItem from="1700068831634" duration="6960000" />
+      <workItem from="1700106513626" duration="1291000" />
+      <workItem from="1700112446955" duration="465000" />
+      <workItem from="1700116810816" duration="2307000" />
+      <workItem from="1700143258928" duration="419000" />
+      <workItem from="1700146368108" duration="1435000" />
+      <workItem from="1700200531098" duration="7283000" />
+      <workItem from="1700208759426" duration="652000" />
     </task>
     <task id="LOCAL-00001" summary="add, remove and update function">
       <option name="closed" value="true" />
@@ -140,9 +187,32 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="add, remove and update function" />
     <option name="LAST_COMMIT_MESSAGE" value="add, remove and update function" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Models/DictionaryManagement.java</url>
+          <line>175</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
