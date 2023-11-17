@@ -194,7 +194,7 @@ public class DictionaryManagement extends Dictionary {
     //Choose 9
     public void exportToFile() {
         try {
-            String path = "D:\\Github Place\\English-Learning-App\\New_Project_Architecture\\Dictionary\\src\\main\\resources\\com\\example\\dictionary\\Database\\dictionaries.txt";
+            String path = "New_Project_Architecture/Dictionary/src/main/resources/com/example/dictionary/Models/Database/dictionaries.txt";
             FileWriter fileWriter = new FileWriter(path);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
             for (Word word : words) {

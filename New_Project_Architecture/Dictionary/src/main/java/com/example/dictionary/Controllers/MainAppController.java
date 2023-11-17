@@ -1,8 +1,6 @@
 package com.example.dictionary.Controllers;
 
 import com.example.dictionary.Application;
-import com.gtranslate.Audio;
-import com.gtranslate.Language;
 import com.sun.speech.freetts.Voice;
 import com.sun.speech.freetts.VoiceManager;
 import javafx.beans.value.ChangeListener;
@@ -21,7 +19,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -110,7 +107,12 @@ public class MainAppController extends Application implements Initializable {
     public void updateListView() {
         wordListView.getItems().clear();
         listTarget.clear();
-        listTarget = getDic().lookUpWord(words, searchTextField.getText());
+        if (searchTextField.getText() != null) {
+            listTarget = getDic().lookUpWord(words, searchTextField.getText());
+        }
+        else {
+            listTarget = getDic().lookUpWord(words, "");
+        }
         wordListView.getItems().addAll(listTarget);
     }
 
