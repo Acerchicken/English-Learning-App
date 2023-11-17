@@ -37,7 +37,7 @@ German de
 Greek el
 Guarani gn
 Gujarati gu
-Haitian Creole ht
+HaitianCreole ht
 Hausa ha
 Hawaiian haw
 Hebrew he
@@ -89,14 +89,14 @@ Oromo om
 Pashto ps
 Persian fa
 Polish pl
-Portuguese(Portugal, Brazil) pt
+Portuguese pt
 Punjabi pa
 Quechua qu
 Romanian ro
 Russian ru
 Samoan sm
 Sanskrit sa
-Scots Gaelic gd
+ScotsGaelic gd
 Sepedi nso
 Serbian sr
 Sesotho st

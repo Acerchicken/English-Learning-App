@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
@@ -7,13 +10,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #A7D397;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.Controllers.MainAppController">
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #A7D397;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.Controllers.MainAppController">
    <children>
       <VBox prefHeight="600.0" prefWidth="146.0">
          <children>
             <Button maxWidth="1.7976931348623157E308" minHeight="0.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="130.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="Search Word" textFill="WHITE" />
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="150.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="English - English" textFill="WHITE" />
-            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="150.0" prefWidth="118.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="Translation Sentence" textFill="WHITE" />
+            <Button fx:id="sentenceTranslateButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#switchToSentenceTranslationScene" prefHeight="150.0" prefWidth="118.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="Translation Sentence" textFill="WHITE" />
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="150.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="Game" textFill="WHITE" />
             <Button fx:id="exitButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#exit" prefHeight="150.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="Exit" textFill="WHITE" />
          </children>
@@ -22,8 +25,12 @@
       <Label fx:id="wordExplainLabel" alignment="TOP_LEFT" layoutX="410.0" layoutY="106.0" prefHeight="446.0" prefWidth="446.0" style="-fx-background-color: #F5EEC8;" />
       <Button fx:id="searchButton" layoutX="304.0" layoutY="38.0" mnemonicParsing="false" onAction="#search" prefHeight="46.0" prefWidth="70.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="Search" textFill="WHITE" />
       <ListView fx:id="wordListView" layoutX="165.0" layoutY="106.0" prefHeight="446.0" prefWidth="210.0" style="-fx-background-color: #F5EEC8;" />
-      <Button fx:id="addWordButton" layoutX="611.0" layoutY="38.0" mnemonicParsing="false" onAction="#switchToAddScene" prefHeight="46.0" prefWidth="113.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="New Word" textFill="WHITE" />
+      <Button fx:id="addWordButton" layoutX="611.0" layoutY="38.0" mnemonicParsing="false" onAction="#switchToAddScene" prefHeight="46.0" prefWidth="113.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="New Word" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor></Button>
       <Button fx:id="removeButton" layoutX="741.0" layoutY="38.0" mnemonicParsing="false" onAction="#remove" prefHeight="46.0" prefWidth="114.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="Remove Word" textFill="WHITE" />
-      <Button fx:id="updateButton" layoutX="786.0" layoutY="106.0" mnemonicParsing="false" onAction="#switchToUpdateScene" prefHeight="46.0" prefWidth="70.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="Change" textFill="WHITE" />
+      <Button fx:id="updateButton" layoutX="784.0" layoutY="106.0" mnemonicParsing="false" onAction="#switchToUpdateScene" prefHeight="46.0" prefWidth="70.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="Change" textFill="WHITE" />
+      <Button fx:id="audioButton" layoutX="713.0" layoutY="106.0" mnemonicParsing="false" onAction="#pronounce" prefHeight="46.0" prefWidth="70.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="Audio" textFill="WHITE" />
    </children>
 </AnchorPane>

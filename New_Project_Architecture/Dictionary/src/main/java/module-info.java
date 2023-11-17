@@ -5,8 +5,9 @@ module com.example.dictionary {
     requires com.google.auth;
     requires com.google.auth.oauth2;
     requires google.cloud.core;
+    requires freetts;
 
-
+    exports com.example.dictionary.Game;
     opens com.example.dictionary to javafx.fxml;
     exports com.example.dictionary;
     exports com.example.dictionary.Controllers;
