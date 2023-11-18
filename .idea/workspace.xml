@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dd69babd-ee43-4a13-9971-f8460d004773" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Controllers/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Controllers/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/java/com/example/dictionary/Game/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/resources/com/example/dictionary/Controllers/Views/GameView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/New_Project_Architecture/Dictionary/src/main/resources/com/example/dictionary/Controllers/Views/GameView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,19 +35,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Github Place/English-Learning-App/New_Project_Architecture/Dictionary&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "Dung's-branch",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/Github Place/English-Learning-App/New_Project_Architecture/Dictionary",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Github Place\English-Learning-App\New_Project_Architecture\Dictionary\src\main\resources\com\example\dictionary\Controllers\Views" />
@@ -99,7 +97,8 @@
       <option name="presentableId" value="Default" />
       <updated>1699084305599</updated>
       <workItem from="1699084306800" duration="1068000" />
-      <workItem from="1700238671413" duration="6015000" />
+      <workItem from="1700238671413" duration="9409000" />
+      <workItem from="1700277739513" duration="5576000" />
     </task>
     <servers />
   </component>
