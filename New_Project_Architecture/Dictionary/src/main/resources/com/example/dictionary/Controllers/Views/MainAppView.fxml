@@ -15,7 +15,7 @@
       <VBox prefHeight="600.0" prefWidth="146.0">
          <children>
             <Button maxWidth="1.7976931348623157E308" minHeight="0.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="130.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="Search Word" textFill="WHITE" />
-            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="150.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="English - English" textFill="WHITE" />
+            <Button fx:id="EnglishMeaningButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#switchToEnglishMeaningScene" prefHeight="150.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="English - English" textFill="WHITE" />
             <Button fx:id="sentenceTranslateButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#switchToSentenceTranslationScene" prefHeight="150.0" prefWidth="118.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="Translation Sentence" textFill="WHITE" />
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="150.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="Game" textFill="WHITE" />
             <Button fx:id="exitButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#exit" prefHeight="150.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="Exit" textFill="WHITE" />

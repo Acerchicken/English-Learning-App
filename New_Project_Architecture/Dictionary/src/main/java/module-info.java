@@ -5,6 +5,7 @@ module com.example.dictionary {
     requires com.google.auth;
     requires com.google.auth.oauth2;
     requires google.cloud.core;
+    requires java.sql;
     requires freetts;
 
     exports com.example.dictionary.Game;
