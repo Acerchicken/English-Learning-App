@@ -11,7 +11,7 @@ import static com.example.dictionary.Models.Dictionary.words;
 
 public class Game extends Application {
     private ArrayList<Word> saveWordList = new ArrayList<>();
-    public ArrayList<String> randomPickWord(int n) {
+    public ArrayList<String> randomPickWord(int n, int length) {
         ArrayList<String> randomListWord = new ArrayList<>();
         getDic().importFromFile();
         Random random = new Random();
@@ -19,7 +19,7 @@ public class Game extends Application {
         while (randomListWord.size() < n) {
             int randomIndex = random.nextInt(Math.abs(size));
             String randomElement = words.get(randomIndex).getTarget().replace(" ", "").replace("'","").replace("-", "").toUpperCase();
-            if (!randomListWord.contains(randomElement)) {
+            if (randomElement.length() <= length && !randomListWord.contains(randomElement)) {
                 randomListWord.add(randomElement);
                 saveWordList.add(words.get(randomIndex));
             }
@@ -129,7 +129,7 @@ public class Game extends Application {
 
     public static void main(String[] args) {
         Game g = new Game();
-        ArrayList<String> wordList = g.randomPickWord(4);
+        ArrayList<String> wordList = g.randomPickWord(4, 7);
         char[][] gameBoard = g.createGameBoard(wordList, 13);
         for (int i = 0; i < wordList.size(); i++) {
             System.out.println(wordList.get(i));
