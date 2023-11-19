@@ -3,10 +3,8 @@ package com.example.dictionary.Controllers;
 import com.example.dictionary.Game.Game;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.input.MouseButton;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
@@ -35,6 +33,8 @@ public class GameController extends Game implements Initializable {
 
     private boolean status;
 
+    private StringBuilder res;
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -43,6 +43,9 @@ public class GameController extends Game implements Initializable {
         gameBoard = game.createGameBoard(wordList, GRIDSIZE);
         createBoard(SIZE);
         status = false;
+        for (String s : wordList) {
+            System.out.println(s);
+        }
     }
 
     public void createBoard(int size) {
@@ -59,7 +62,6 @@ public class GameController extends Game implements Initializable {
                 boardButtons[j][i].setFont(new Font(25 - GRIDSIZE));
                 boardButtons[j][i].setStyle("-fx-background-color: yellow; -fx-font-weight: bold;");
                 boardPane.setGridLinesVisible(false);
-                System.out.println(status);
             }
         }
         for (int i = 0; i < GRIDSIZE; i++) {
@@ -72,42 +74,58 @@ public class GameController extends Game implements Initializable {
                     if (status) {
                         if (rowIndex == firstPointX) {
                             if (firstPointY <= columnIndex) {
+                                res = new StringBuilder("");
                                 for (int k = firstPointY; k <= columnIndex; k++) {
+                                    res.append(boardButtons[k][rowIndex].getText());
                                     boardButtons[k][rowIndex].setStyle("-fx-background-color: green;-fx-font-weight: bold;");
                                 }
                             } else {
+                                res = new StringBuilder("");
                                 for (int k = firstPointY; k >= columnIndex; k--) {
+                                    res.append(boardButtons[k][rowIndex].getText());
                                     boardButtons[k][rowIndex].setStyle("-fx-background-color: green;-fx-font-weight: bold;");
                                 }
                             }
                         } else if (columnIndex == firstPointY) {
                             if (firstPointX <= rowIndex) {
+                                res = new StringBuilder("");
                                 for (int k = firstPointX; k <= rowIndex; k++) {
+                                    res.append(boardButtons[columnIndex][k].getText());
                                     boardButtons[columnIndex][k].setStyle("-fx-background-color: green;-fx-font-weight: bold;");
                                 }
                             } else {
+                                res = new StringBuilder("");
                                 for (int k = firstPointX; k >= rowIndex; k--) {
+                                    res.append(boardButtons[columnIndex][k].getText());
                                     boardButtons[columnIndex][k].setStyle("-fx-background-color: green;-fx-font-weight: bold;");
                                 }
                             }
                         } else if (Math.abs(rowIndex - firstPointX) == Math.abs(columnIndex - firstPointY)) {
                             if (firstPointX <= rowIndex) {
                                 if (firstPointY <= columnIndex) {
+                                    res = new StringBuilder("");
                                     for (int k = 0; k <= rowIndex - firstPointX; k++) {
+                                        res.append(boardButtons[firstPointY + k][firstPointX + k].getText());
                                         boardButtons[firstPointY + k][firstPointX + k].setStyle("-fx-background-color: green;-fx-font-weight: bold;");
                                     }
                                 } else {
+                                    res = new StringBuilder("");
                                     for (int k = 0; k <= rowIndex - firstPointX; k++) {
+                                        res.append(boardButtons[firstPointY - k][firstPointX + k].getText());
                                         boardButtons[firstPointY - k][firstPointX + k].setStyle("-fx-background-color: green;-fx-font-weight: bold;");
                                     }
                                 }
                             } else {
                                 if (firstPointY <= columnIndex) {
+                                    res = new StringBuilder("");
                                     for (int k = firstPointX - rowIndex; k >= 0; k--) {
+                                        res.append(boardButtons[firstPointY + k][firstPointX - k].getText());
                                         boardButtons[firstPointY + k][firstPointX - k].setStyle("-fx-background-color: green;-fx-font-weight: bold;");
                                     }
                                 } else {
+                                    res = new StringBuilder("");
                                     for (int k = firstPointX - rowIndex; k >= 0; k--) {
+                                        res.append(boardButtons[firstPointY - k][firstPointX - k].getText());
                                         boardButtons[firstPointY - k][firstPointX - k].setStyle("-fx-background-color: green;-fx-font-weight: bold;");
                                     }
                                 }
@@ -126,15 +144,27 @@ public class GameController extends Game implements Initializable {
                     boardButtons[finalJ][finalI].setStyle("-fx-background-color: yellow; -fx-font-weight: bold;");
                 });
                 boardButtons[j][i].setOnMouseClicked(event -> {
-                    status = true;
-                    firstPointX = GridPane.getRowIndex(boardButtons[finalJ][finalI]);
-                    firstPointY = GridPane.getColumnIndex(boardButtons[finalJ][finalI]);
-                    for (int k = 0; k < GRIDSIZE; k++) {
-                        for (int l = 0; l < GRIDSIZE; l++) {
-                            boardButtons[l][k].setStyle("-fx-background-color: yellow; -fx-font-weight: bold;");
+                    if (!status) {
+                        status = true;
+                        firstPointX = GridPane.getRowIndex(boardButtons[finalJ][finalI]);
+                        firstPointY = GridPane.getColumnIndex(boardButtons[finalJ][finalI]);
+                        for (int k = 0; k < GRIDSIZE; k++) {
+                            for (int l = 0; l < GRIDSIZE; l++) {
+                                boardButtons[l][k].setStyle("-fx-background-color: yellow; -fx-font-weight: bold;");
+                            }
+                        }
+                        boardButtons[firstPointY][firstPointX].setStyle("-fx-background-color: green;-fx-font-weight: bold;");
+                    }
+                    else {
+                        status = false;
+                        System.out.println(wordList.contains(res.toString()) || wordList.contains(res.reverse().toString()));
+                        System.out.println(res);
+                        for (int k = 0; k < GRIDSIZE; k++) {
+                            for (int l = 0; l < GRIDSIZE; l++) {
+                                boardButtons[l][k].setStyle("-fx-background-color: yellow; -fx-font-weight: bold;");
+                            }
                         }
                     }
-                    boardButtons[firstPointY][firstPointX].setStyle("-fx-background-color: green;-fx-font-weight: bold;");
                 });
             }
         }
