@@ -120,16 +120,15 @@ public class MainAppController extends Application implements Initializable {
         wordListView.getItems().addAll(listTarget);
     }
 
-    public void switchToAddScene(ActionEvent event) throws IOException {
+    public void switchToAddScene(ActionEvent event) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("Views/AddView.fxml"));
-        // Lấy stage hiện tại
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
 
-    public void switchToUpdateScene(ActionEvent event) throws IOException {
+    public void switchToUpdateScene(ActionEvent event) throws Exception {
         if (wordTarget == null || wordExplain == null || wordTarget.isEmpty() || wordExplain.isEmpty())
             AlertController.generalAlert(wordTarget, wordExplain);
         else {
