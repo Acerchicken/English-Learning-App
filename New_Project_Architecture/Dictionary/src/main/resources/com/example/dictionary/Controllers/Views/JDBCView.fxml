@@ -9,15 +9,15 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #A7D397;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.Controllers.JDBCController">
    <children>
-      <TextField fx:id="searchWord" layoutX="111.0" layoutY="55.0" prefHeight="51.0" prefWidth="173.0" style="-fx-background-color: #F5EEC8;" />
-      <Button fx:id="searchButton" layoutX="283.0" layoutY="55.0" mnemonicParsing="false" onAction="#search" prefHeight="51.0" prefWidth="76.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="Search" textFill="WHITE" />
-      <ListView fx:id="suggestWordList" layoutX="111.0" layoutY="131.0" prefHeight="413.0" prefWidth="248.0" style="-fx-background-color: #F5EEC8;" />
-      <Button fx:id="backButton" layoutX="666.0" layoutY="55.0" mnemonicParsing="false" onAction="#switchToAppScene" prefHeight="51.0" prefWidth="76.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="Back" textFill="WHITE" />
+      <TextField fx:id="searchWord" layoutX="111.0" layoutY="55.0" prefHeight="51.0" prefWidth="184.0" style="-fx-background-color: #F5EEC8;" />
+      <Button id="Nut" fx:id="searchButton" layoutX="302.0" layoutY="55.0" mnemonicParsing="false" onAction="#search" prefHeight="51.0" prefWidth="76.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" stylesheets="@css/ButtonHover.css" text="Search" textFill="WHITE" />
+      <ListView fx:id="suggestWordList" layoutX="111.0" layoutY="131.0" prefHeight="413.0" prefWidth="267.0" style="-fx-background-color: #F5EEC8;" />
+      <Button id="Nut" fx:id="backButton" layoutX="666.0" layoutY="55.0" mnemonicParsing="false" onAction="#switchToAppScene" prefHeight="51.0" prefWidth="76.0" stylesheets="@css/ButtonHover.css" text="Back" textFill="WHITE" />
       <ScrollPane fx:id="scrollPane" layoutX="450.0" layoutY="131.0" prefHeight="413.0" prefWidth="394.0">
          <content>
             <TextFlow fx:id="EnglishDefinition" prefHeight="413.0" prefWidth="394.0" style="-fx-background-color: #F5EEC8;" />
          </content>
       </ScrollPane>
-      <Button fx:id="removeButton" layoutX="768.0" layoutY="55.0" mnemonicParsing="false" onAction="#removeWordController" prefHeight="51.0" prefWidth="76.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="Back" textFill="WHITE" />
+      <Button id="Nut" fx:id="removeButton" layoutX="768.0" layoutY="55.0" mnemonicParsing="false" onAction="#removeWordController" prefHeight="51.0" prefWidth="76.0" stylesheets="@css/ButtonHover.css" text="Remove" textFill="WHITE" />
    </children>
 </AnchorPane>

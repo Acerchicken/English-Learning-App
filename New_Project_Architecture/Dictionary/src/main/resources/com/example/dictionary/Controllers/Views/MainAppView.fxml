@@ -11,11 +11,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="903.0" style="-fx-background-color: #A7D397;" stylesheets="@css/MainAppView.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.Controllers.MainAppController">
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="903.0" style="-fx-background-color: #A7D397;" stylesheets="@css/ButtonHover.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.Controllers.MainAppController">
    <children>
       <VBox layoutY="106.0" prefHeight="446.0" prefWidth="177.0">
          <children>
-            <Button id="Nut" fx:id="EnglishMeaningButton" contentDisplay="TOP" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#switchToEnglishMeaningScene" prefHeight="150.0" prefWidth="177.0" stylesheets="@css/MainAppView.css" text="English - English" textFill="WHITE">
+            <Button id="Nut" fx:id="EnglishMeaningButton" contentDisplay="TOP" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#switchToEnglishMeaningScene" prefHeight="150.0" prefWidth="177.0" stylesheets="@css/ButtonHover.css" text="English - English" textFill="WHITE">
                <graphic>
                   <ImageView fitHeight="29.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -26,7 +26,7 @@
                <font>
                   <Font size="14.0" />
                </font></Button>
-            <Button id="Nut" fx:id="sentenceTranslateButton" contentDisplay="TOP" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#switchToSentenceTranslationScene" prefHeight="150.0" prefWidth="118.0" stylesheets="@css/MainAppView.css" text="Translation Sentence" textFill="WHITE">
+            <Button id="Nut" fx:id="sentenceTranslateButton" contentDisplay="TOP" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#switchToSentenceTranslationScene" prefHeight="150.0" prefWidth="118.0" stylesheets="@css/ButtonHover.css" text="Translation Sentence" textFill="WHITE">
                <graphic>
                   <ImageView fitHeight="29.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -37,7 +37,7 @@
                <font>
                   <Font size="14.0" />
                </font></Button>
-            <Button id="Nut" contentDisplay="TOP" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="150.0" stylesheets="@css/MainAppView.css" text="Game" textFill="WHITE">
+            <Button id="Nut" contentDisplay="TOP" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="150.0" stylesheets="@css/ButtonHover.css" text="Game" textFill="WHITE">
                <graphic>
                   <ImageView fitHeight="29.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -48,7 +48,7 @@
                <font>
                   <Font size="14.0" />
                </font></Button>
-            <Button id="Nut" fx:id="exitButton" contentDisplay="TOP" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#exit" prefHeight="150.0" stylesheets="@css/MainAppView.css" text="Exit" textFill="WHITE">
+            <Button id="Nut" fx:id="exitButton" contentDisplay="TOP" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#exit" prefHeight="150.0" stylesheets="@css/ButtonHover.css" text="Exit" textFill="WHITE">
                <graphic>
                   <ImageView fitHeight="29.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                      <image>
