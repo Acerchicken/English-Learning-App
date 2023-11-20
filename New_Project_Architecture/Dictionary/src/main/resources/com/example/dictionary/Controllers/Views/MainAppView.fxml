@@ -11,85 +11,85 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="903.0" style="-fx-background-color: #A7D397;" stylesheets="@css/MainAppView.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.Controllers.MainAppController">
-    <children>
-        <VBox layoutY="106.0" prefHeight="446.0" prefWidth="177.0">
-            <children>
-                <Button id="Nut" fx:id="EnglishMeaningButton" contentDisplay="TOP" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#switchToEnglishMeaningScene" prefHeight="150.0" prefWidth="177.0" stylesheets="@css/MainAppView.css" text="English - English" textFill="WHITE">
-                    <graphic>
-                        <ImageView fitHeight="29.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@../../Image/imgEngEng.png" />
-                            </image>
-                        </ImageView>
-                    </graphic>
-                    <font>
-                        <Font size="14.0" />
-                    </font></Button>
-                <Button id="Nut" fx:id="sentenceTranslateButton" contentDisplay="TOP" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#switchToSentenceTranslationScene" prefHeight="150.0" prefWidth="118.0" stylesheets="@css/MainAppView.css" text="Translation Sentence" textFill="WHITE">
-                    <graphic>
-                        <ImageView fitHeight="29.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@../../Image/img_google_translate.png" />
-                            </image>
-                        </ImageView>
-                    </graphic>
-                    <font>
-                        <Font size="14.0" />
-                    </font></Button>
-                <Button id="Nut" fx:id="gameButton" contentDisplay="TOP" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#switchToGameScene" prefHeight="150.0" stylesheets="@css/MainAppView.css" text="Game" textFill="WHITE">
-                    <graphic>
-                        <ImageView fitHeight="29.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@../../Image/imgGame.png" />
-                            </image>
-                        </ImageView>
-                    </graphic>
-                    <font>
-                        <Font size="14.0" />
-                    </font></Button>
-                <Button id="Nut" fx:id="exitButton" contentDisplay="TOP" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#exit" prefHeight="150.0" stylesheets="@css/MainAppView.css" text="Exit" textFill="WHITE">
-                    <graphic>
-                        <ImageView fitHeight="29.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@../../Image/imgExit.png" />
-                            </image>
-                        </ImageView>
-                    </graphic>
-                    <font>
-                        <Font size="14.0" />
-                    </font></Button>
-            </children>
-        </VBox>
-        <TextField id="textField" fx:id="searchTextField" layoutX="188.0" layoutY="38.0" onAction="#updateListView" prefHeight="46.0" prefWidth="139.0" />
-        <Label fx:id="wordExplainLabel" alignment="TOP_LEFT" layoutX="420.0" layoutY="106.0" prefHeight="446.0" prefWidth="436.0" style="-fx-background-color: #F5EEC8;" />
-        <Button id="Nut" fx:id="searchButton" layoutX="334.0" layoutY="38.0" mnemonicParsing="false" onAction="#search" prefHeight="46.0" prefWidth="70.0" text="Search" textFill="WHITE" />
-        <ListView fx:id="wordListView" layoutX="188.0" layoutY="106.0" prefHeight="446.0" prefWidth="216.0" style="-fx-background-color: #F5EEC8;" />
-        <Button id="Nut" fx:id="addWordButton" layoutX="611.0" layoutY="38.0" mnemonicParsing="false" onAction="#switchToAddScene" prefHeight="46.0" prefWidth="113.0" text="New Word" textFill="WHITE">
-            <cursor>
-                <Cursor fx:constant="DEFAULT" />
-            </cursor></Button>
-        <Button id="Nut" fx:id="removeButton" layoutX="741.0" layoutY="38.0" mnemonicParsing="false" onAction="#remove" prefHeight="46.0" prefWidth="114.0" text="Remove Word" textFill="WHITE" />
-        <Button id="Nut" fx:id="updateButton" layoutX="784.0" layoutY="106.0" mnemonicParsing="false" onAction="#switchToUpdateScene" prefHeight="46.0" prefWidth="70.0" textFill="WHITE">
-            <graphic>
-                <ImageView fitHeight="34.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@../../Image/Edit.png" />
-                    </image>
-                </ImageView>
-            </graphic></Button>
-        <Button id="Nut" fx:id="audioButton" layoutX="713.0" layoutY="106.0" mnemonicParsing="false" onAction="#pronounce" prefHeight="46.0" prefWidth="70.0" textFill="WHITE">
-            <graphic>
-                <ImageView fitHeight="34.0" fitWidth="54.0" opacity="0.81" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@../../Image/sound.png" />
-                    </image>
-                </ImageView>
-            </graphic></Button>
-        <ImageView fitHeight="90.0" fitWidth="97.0" layoutX="44.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@../../Image/imgbin_avocado-soup-drawing-png.png" />
-            </image>
-        </ImageView>
-    </children>
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="903.0" style="-fx-background-color: #A7D397;" stylesheets="@css/ButtonHover.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.Controllers.MainAppController">
+   <children>
+      <VBox layoutY="106.0" prefHeight="446.0" prefWidth="177.0">
+         <children>
+            <Button id="Nut" fx:id="EnglishMeaningButton" contentDisplay="TOP" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#switchToEnglishMeaningScene" prefHeight="150.0" prefWidth="177.0" stylesheets="@css/ButtonHover.css" text="English - English" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Image/imgEngEng.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button id="Nut" fx:id="sentenceTranslateButton" contentDisplay="TOP" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#switchToSentenceTranslationScene" prefHeight="150.0" prefWidth="118.0" stylesheets="@css/ButtonHover.css" text="Translation Sentence" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Image/img_google_translate.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button id="Nut" contentDisplay="TOP" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="150.0" stylesheets="@css/ButtonHover.css" text="Game" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Image/imgGame.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button id="Nut" fx:id="exitButton" contentDisplay="TOP" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#exit" prefHeight="150.0" stylesheets="@css/ButtonHover.css" text="Exit" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Image/imgExit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+         </children>
+      </VBox>
+      <TextField id="textField" fx:id="searchTextField" layoutX="188.0" layoutY="38.0" onAction="#updateListView" prefHeight="46.0" prefWidth="139.0" />
+      <Label fx:id="wordExplainLabel" alignment="TOP_LEFT" layoutX="420.0" layoutY="106.0" prefHeight="446.0" prefWidth="436.0" style="-fx-background-color: #F5EEC8;" />
+      <Button id="Nut" fx:id="searchButton" layoutX="334.0" layoutY="38.0" mnemonicParsing="false" onAction="#search" prefHeight="46.0" prefWidth="70.0" text="Search" textFill="WHITE" />
+      <ListView fx:id="wordListView" layoutX="188.0" layoutY="106.0" prefHeight="446.0" prefWidth="216.0" style="-fx-background-color: #F5EEC8;" />
+      <Button id="Nut" fx:id="addWordButton" layoutX="611.0" layoutY="38.0" mnemonicParsing="false" onAction="#switchToAddScene" prefHeight="46.0" prefWidth="113.0" text="New Word" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor></Button>
+      <Button id="Nut" fx:id="removeButton" layoutX="741.0" layoutY="38.0" mnemonicParsing="false" onAction="#remove" prefHeight="46.0" prefWidth="114.0" text="Remove Word" textFill="WHITE" />
+      <Button id="Nut" fx:id="updateButton" layoutX="784.0" layoutY="106.0" mnemonicParsing="false" onAction="#switchToUpdateScene" prefHeight="46.0" prefWidth="70.0" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Image/Edit.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button id="Nut" fx:id="audioButton" layoutX="713.0" layoutY="106.0" mnemonicParsing="false" onAction="#pronounce" prefHeight="46.0" prefWidth="70.0" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="54.0" opacity="0.81" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Image/sound.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <ImageView fitHeight="90.0" fitWidth="97.0" layoutX="44.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Image/imgbin_avocado-soup-drawing-png.png" />
+         </image>
+      </ImageView>
+   </children>
 </AnchorPane>
