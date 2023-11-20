@@ -1,0 +1,11 @@
+#Nut{
+    -fx-background-color: #5A7069;
+    -fx-font-weight: bold;
+}
+
+#Nut:hover{
+    -fx-background-color: #9AD0C2;
+    -fx-border-color: white;
+    -fx-border-width: 2px;
+}
+
