@@ -30,5 +30,12 @@ public class Word {
         return explain;
     }
 
-
+    public int compareTo(String target) {
+        if (this.target.compareTo(target) < 0) {
+            return -1;
+        } else if (this.target.compareTo(target) > 0) {
+            return 1;
+        }
+        return 0;
+    }
 }

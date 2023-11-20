@@ -1,5 +1,7 @@
 package com.example.dictionary.Models;
 
+import com.example.dictionary.Trie.Trie;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -141,12 +143,39 @@ public class DictionaryManagement extends Dictionary {
     public Word searchWords(String targetWord) {
         Word result = new Word();
         boolean found = false;
+//
+//        for (Word word : words) {
+//            if (word.getTarget().equalsIgnoreCase(targetWord)) {
+//                result = word;
+//                found = true;
+//                break;
+//            }
+//        }
+        int left = 0;
+        int right = words.size();
+        while (left <= right) {
+            int leftMid = left + (right - left) / 3;
+            int rightMid = right - (right - left) / 3;
 
-        for (Word word : words) {
-            if (word.getTarget().equalsIgnoreCase(targetWord)) {
-                result = word;
+            if (words.get(leftMid).getTarget().equals(targetWord)) {
+                result = words.get(leftMid);
                 found = true;
                 break;
+            }
+
+            if (words.get(rightMid).getTarget().equals(targetWord)) {
+                result = words.get(rightMid);
+                found = true;
+                break;
+            }
+
+            if (words.get(rightMid).getTarget().compareTo(targetWord) < 0) {
+                left = rightMid + 1;
+            } else if (words.get(leftMid).getTarget().compareTo(targetWord) > 0) {
+                right = leftMid - 1;
+            } else {
+                left = leftMid + 1;
+                right = rightMid - 1;
             }
         }
         if (!found) {
@@ -157,13 +186,16 @@ public class DictionaryManagement extends Dictionary {
         return result;
     }
     public ArrayList<String> lookUpWord(ArrayList<Word> root, String key) {
-        ArrayList<String> lookUp = new ArrayList<>();
+        //        for (Word word : root) {
+//            if (word.getTarget().startsWith(key)) {
+//                lookUp.add(word.getTarget());
+//            }
+//        }
+        Trie trie = new Trie();
         for (Word word : root) {
-            if (word.getTarget().startsWith(key)) {
-                lookUp.add(word.getTarget());
-            }
+            trie.insert(word.getTarget());
         }
-        return lookUp;
+        return new ArrayList<>(trie.findAllPrefixWords(key));
     }
     //Choose 8
     public void importFromFile() {
