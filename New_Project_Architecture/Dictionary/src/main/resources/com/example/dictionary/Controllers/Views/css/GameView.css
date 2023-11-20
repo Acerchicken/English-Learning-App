@@ -1,0 +1,9 @@
+.choice-box .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+}
+
+.choice-box .context-menu {
+    -fx-background-color:  #495E57;
+}

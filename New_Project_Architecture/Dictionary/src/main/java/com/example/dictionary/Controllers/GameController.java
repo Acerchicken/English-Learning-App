@@ -27,7 +27,9 @@ public class GameController extends Game implements Initializable {
     private Scene scene;
     private Button[][] boardButtons;
 
-    private final int GRIDSIZE = 10;
+    private int gridSize;
+
+    private int questionNumber;
     private final int SIZE = 480;
 
     private final int GAP = 1;
@@ -51,6 +53,9 @@ public class GameController extends Game implements Initializable {
     private Button controlGame;
     @FXML
     private Label infoLabel;
+    @FXML
+    private ChoiceBox<String> difficulty;
+    private final String[] DIFFICULTY = {"Easy", "Medium", "Hard"};
 
     private boolean winStatus;
 
@@ -58,16 +63,21 @@ public class GameController extends Game implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        startGame(SIZE);
+        difficulty.getItems().addAll(DIFFICULTY);
+        difficulty.setValue("Easy");
+        difficulty.setOnAction(this::chooseDifficulty);
+        gridSize = 6;
+        questionNumber = 2;
+        startGame(SIZE, gridSize, questionNumber);
     }
 
-    public void startGame(int size) {
+    public void startGame(int size, int grid_size, int question_number) {
         String chooseWordStyle = "-fx-background-color: #2D9596;-fx-font-weight: bold; -fx-font-size: 24 - GRIDSIZE;";
         String boardStyle = "-fx-background-color: #ECF4D6;-fx-font-weight: bold; -fx-font-size: 24 - GRIDSIZE;";
         winStatus = false;
         Game game = new Game();
-        wordMap = game.randomPickWord(3, 7);
-        gameBoard = game.createGameBoard(wordMap, GRIDSIZE);
+        wordMap = game.randomPickWord(question_number, grid_size - 2);
+        gameBoard = game.createGameBoard(wordMap, grid_size);
         status = false;
         res = new StringBuilder("");
         StringBuilder question = new StringBuilder("A word with:\n");
@@ -93,18 +103,18 @@ public class GameController extends Game implements Initializable {
         boardPane.setMaxSize(size, size);
         boardPane.setLayoutX(880 - SIZE);
         boardPane.setLayoutY((double) (600 - SIZE) / 2);
-        boardButtons = new Button[GRIDSIZE][GRIDSIZE];
+        boardButtons = new Button[grid_size][grid_size];
         boardPane.setDisable(true);
-        for (int i = 0; i < GRIDSIZE; i++) {
-            for (int j = 0; j < GRIDSIZE; j++) {
-                boardButtons[j][i] = new Button("Button #" + (j + i * GRIDSIZE + 1));
-                boardButtons[j][i].setMinSize((double) size / GRIDSIZE, (double) size / GRIDSIZE);
+        for (int i = 0; i < grid_size; i++) {
+            for (int j = 0; j < grid_size; j++) {
+                boardButtons[j][i] = new Button("Button #" + (j + i * grid_size + 1));
+                boardButtons[j][i].setMinSize((double) size / grid_size, (double) size / grid_size);
                 boardButtons[j][i].setStyle(boardStyle);
                 boardPane.setGridLinesVisible(false);
             }
         }
-        for (int i = 0; i < GRIDSIZE; i++) {
-            for (int j = 0; j < GRIDSIZE; j++) {
+        for (int i = 0; i < grid_size; i++) {
+            for (int j = 0; j < grid_size; j++) {
                 int finalI = i;
                 int finalJ = j;
                 boardButtons[j][i].setOnMouseEntered(event -> {
@@ -172,8 +182,8 @@ public class GameController extends Game implements Initializable {
                                 }
                             }
                         } else {
-                            for (int k = 0; k < GRIDSIZE; k++) {
-                                for (int l = 0; l < GRIDSIZE; l++) {
+                            for (int k = 0; k < grid_size; k++) {
+                                for (int l = 0; l < grid_size; l++) {
                                     boardButtons[l][k].setStyle(boardStyle);
                                 }
                             }
@@ -189,8 +199,8 @@ public class GameController extends Game implements Initializable {
                         status = true;
                         firstPointX = GridPane.getRowIndex(boardButtons[finalJ][finalI]);
                         firstPointY = GridPane.getColumnIndex(boardButtons[finalJ][finalI]);
-                        for (int k = 0; k < GRIDSIZE; k++) {
-                            for (int l = 0; l < GRIDSIZE; l++) {
+                        for (int k = 0; k < grid_size; k++) {
+                            for (int l = 0; l < grid_size; l++) {
                                 boardButtons[l][k].setStyle(boardStyle);
                             }
                         }
@@ -222,8 +232,8 @@ public class GameController extends Game implements Initializable {
                             boardPane.setDisable(true);
                             winStatus = true;
                         }
-                        for (int k = 0; k < GRIDSIZE; k++) {
-                            for (int l = 0; l < GRIDSIZE; l++) {
+                        for (int k = 0; k < grid_size; k++) {
+                            for (int l = 0; l < grid_size; l++) {
                                 boardButtons[l][k].setStyle(boardStyle);
                             }
                         }
@@ -232,8 +242,8 @@ public class GameController extends Game implements Initializable {
             }
         }
 
-        for (int i = 0; i < GRIDSIZE; i++) {
-            for (int j = 0; j < GRIDSIZE; j++) {
+        for (int i = 0; i < grid_size; i++) {
+            for (int j = 0; j < grid_size; j++) {
                 boardButtons[j][i].setText(String.valueOf(gameBoard[i][j]));
                 boardPane.add(boardButtons[j][i], j, i);
             }
@@ -258,7 +268,7 @@ public class GameController extends Game implements Initializable {
 
     public void reset(ActionEvent event) {
         boardPane.getChildren().clear();
-        startGame(SIZE);
+        startGame(SIZE, gridSize, questionNumber);
     }
 
     public void back(ActionEvent event) throws IOException {
@@ -271,6 +281,30 @@ public class GameController extends Game implements Initializable {
             scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
+        }
+    }
+
+    public void chooseDifficulty(ActionEvent event) {
+        String choice = difficulty.getValue();
+        switch (choice) {
+            case "Easy" -> {
+                boardPane.getChildren().clear();
+                gridSize = 6;
+                questionNumber = 2;
+                startGame(SIZE, gridSize, questionNumber);
+            }
+            case "Medium" -> {
+                boardPane.getChildren().clear();
+                gridSize = 8;
+                questionNumber = 3;
+                startGame(SIZE, gridSize, questionNumber);
+            }
+            case "Hard" -> {
+                boardPane.getChildren().clear();
+                gridSize = 10;
+                questionNumber = 4;
+                startGame(SIZE, gridSize, questionNumber);
+            }
         }
     }
 }
