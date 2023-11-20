@@ -9,7 +9,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 public class Translator {
-    String credentialsPath = "New_Project_Architecture/Dictionary/src/main/resources/GoogleTranslateAPICredentials/testapi-402514-71998670d628.json";
+    private String credentialsPath = "New_Project_Architecture/Dictionary/src/main/resources/GoogleTranslateAPICredentials/testapi-402514-71998670d628.json";
     private Translate translate;
     public Translator() {
         try {

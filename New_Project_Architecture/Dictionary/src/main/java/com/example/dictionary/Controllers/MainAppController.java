@@ -23,7 +23,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-import static com.example.dictionary.Models.Dictionary.words;
+import static com.example.dictionary.Models.Dictionary.getWords;
 
 public class MainAppController extends Application implements Initializable {
     // CÁC ATTRIBUTE CHO SEARCH
@@ -84,7 +84,7 @@ public class MainAppController extends Application implements Initializable {
         if (wordExplain != null) {
             wordExplainLabel.setText(wordExplain);
         }
-        listTarget = getDic().lookUpWord(words, searchTextField.getText().trim());
+        listTarget = getDic().lookUpWord(getWords(), searchTextField.getText().trim());
         searchTextField.setText(wordTarget);
         wordExplainLabel.setText(wordExplain);
         wordListView.getItems().addAll(listTarget);
@@ -112,10 +112,10 @@ public class MainAppController extends Application implements Initializable {
         wordListView.getItems().clear();
         listTarget.clear();
         if (searchTextField.getText() != null) {
-            listTarget = getDic().lookUpWord(words, searchTextField.getText());
+            listTarget = getDic().lookUpWord(getWords(), searchTextField.getText());
         }
         else {
-            listTarget = getDic().lookUpWord(words, "");
+            listTarget = getDic().lookUpWord(getWords(), "");
         }
         wordListView.getItems().addAll(listTarget);
     }

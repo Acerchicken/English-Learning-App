@@ -37,7 +37,7 @@
                     <font>
                         <Font size="14.0" />
                     </font></Button>
-                <Button id="Nut" contentDisplay="TOP" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="150.0" stylesheets="@css/MainAppView.css" text="Game" textFill="WHITE">
+                <Button id="Nut" fx:id="gameButton" contentDisplay="TOP" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#switchToGameScene" prefHeight="150.0" stylesheets="@css/MainAppView.css" text="Game" textFill="WHITE">
                     <graphic>
                         <ImageView fitHeight="29.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                             <image>

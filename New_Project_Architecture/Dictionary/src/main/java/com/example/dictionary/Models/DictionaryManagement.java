@@ -4,10 +4,10 @@ import com.example.dictionary.Trie.Trie;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class DictionaryManagement extends Dictionary {
-    Small_Function Func = new Small_Function();
     Scanner scanner = new Scanner(System.in);
 
     //Choose 1
@@ -20,23 +20,25 @@ public class DictionaryManagement extends Dictionary {
                 String explain = scanner.nextLine();
                 Word word = new Word(target, explain);
                 Dictionary.addWord(word);
-                words.add(word);
+                getWords().add(word);
             }
-            System.out.println("You have successfully added " + numberOfWords + " words.\n\n\n");
+            System.out.println("You have successfully added " + numberOfWords + " getWords().\n\n\n");
         } catch (Exception e) {
             System.out.println("Action 1 cannot completed");
         }
     }
+
     public void addWord(String wordTarget, String wordExplain) {
         Word wordAdded = new Word(wordTarget, wordExplain);
-        words.add(wordAdded);
+        getWords().add(wordAdded);
     }
+
     //Choose 2
     public void removeWord(String target) {
         try {
             DictionaryManagement dic = new DictionaryManagement();
             Word removeWord = dic.searchWords(target);
-            words.remove(removeWord);
+            getWords().remove(removeWord);
             exportToFile();
 //            ArrayList<Word> selectedWords = Func.lookUpWord(words, target);
 //
@@ -121,7 +123,7 @@ public class DictionaryManagement extends Dictionary {
 
     //Choose 4
     public void showAllWords() {
-        Func.displayList(words);
+        displayList(getWords());
     }
 
     //Choose 5
@@ -144,7 +146,7 @@ public class DictionaryManagement extends Dictionary {
         Word result = new Word();
         boolean found = false;
 //
-//        for (Word word : words) {
+//        for (Word word : getWords()) {
 //            if (word.getTarget().equalsIgnoreCase(targetWord)) {
 //                result = word;
 //                found = true;
@@ -152,26 +154,26 @@ public class DictionaryManagement extends Dictionary {
 //            }
 //        }
         int left = 0;
-        int right = words.size();
+        int right = getWords().size();
         while (left <= right) {
             int leftMid = left + (right - left) / 3;
             int rightMid = right - (right - left) / 3;
 
-            if (words.get(leftMid).getTarget().equals(targetWord)) {
-                result = words.get(leftMid);
+            if (getWords().get(leftMid).getTarget().equals(targetWord)) {
+                result = getWords().get(leftMid);
                 found = true;
                 break;
             }
 
-            if (words.get(rightMid).getTarget().equals(targetWord)) {
-                result = words.get(rightMid);
+            if (getWords().get(rightMid).getTarget().equals(targetWord)) {
+                result = getWords().get(rightMid);
                 found = true;
                 break;
             }
 
-            if (words.get(rightMid).getTarget().compareTo(targetWord) < 0) {
+            if (getWords().get(rightMid).getTarget().compareTo(targetWord) < 0) {
                 left = rightMid + 1;
-            } else if (words.get(leftMid).getTarget().compareTo(targetWord) > 0) {
+            } else if (getWords().get(leftMid).getTarget().compareTo(targetWord) > 0) {
                 right = leftMid - 1;
             } else {
                 left = leftMid + 1;
@@ -185,6 +187,7 @@ public class DictionaryManagement extends Dictionary {
         }
         return result;
     }
+
     public ArrayList<String> lookUpWord(ArrayList<Word> root, String key) {
         //        for (Word word : root) {
 //            if (word.getTarget().startsWith(key)) {
@@ -197,6 +200,7 @@ public class DictionaryManagement extends Dictionary {
         }
         return new ArrayList<>(trie.findAllPrefixWords(key));
     }
+
     //Choose 8
     public void importFromFile() {
         try {
@@ -207,7 +211,7 @@ public class DictionaryManagement extends Dictionary {
             while ((line = bufferedReader.readLine()) != null) {
                 if (line.contains("|")) {
                     if (!newWord.getExplain().isEmpty() && !newWord.getTarget().isEmpty()) {
-                        words.add(newWord);
+                        getWords().add(newWord);
                         newWord = new Word();
                     }
                     newWord.setTarget(line.substring(1));
@@ -229,7 +233,7 @@ public class DictionaryManagement extends Dictionary {
             String path = "New_Project_Architecture/Dictionary/src/main/resources/com/example/dictionary/Models/Database/dictionaries.txt";
             FileWriter fileWriter = new FileWriter(path);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-            for (Word word : words) {
+            for (Word word : getWords()) {
                 bufferedWriter.write("|" + word.getTarget() + "\n" + word.getExplain());
                 bufferedWriter.newLine();
             }
@@ -238,10 +242,37 @@ public class DictionaryManagement extends Dictionary {
             System.out.println("Something went wrong: " + e);
         }
     }
-}
 
-//try{
-//
-//        }catch (Exception e){
-//        System.out.println("Action  cannot completed");
-//    }
+    public void displayList(ArrayList<Word> words) {
+        //Sort theo alphabet
+        Collections.sort(words, new SortDictionary());
+        //Can chinh | cho thang hang
+        int maxIndex = (int) Math.log10(words.size()) + 1;
+        int maxEnglishLength = 0;
+        int maxVietnameseLength = 0;
+        for (Word word : words) {
+            int englishLength = word.getTarget().length();
+            int vietnameseLength = word.getExplain().length();
+            if (englishLength > maxEnglishLength) {
+                maxEnglishLength = englishLength;
+            }
+            if (vietnameseLength > maxVietnameseLength) {
+                maxVietnameseLength = vietnameseLength;
+            }
+        }
+
+        //Hien thi tieu de cot
+        System.out.printf("%-" + maxIndex + "s | %-"
+                + maxEnglishLength + "s | %-"
+                + maxVietnameseLength + "s%n", "Index", "English", "Vietnamese");
+
+        //In danh sach
+        for (int i = 0; i < words.size(); i++) {
+            Word word = words.get(i);
+            System.out.printf("%-" + maxIndex + "s | %-"
+                    + maxEnglishLength + "s | %-"
+                    + maxVietnameseLength + "s%n", i + 1, word.getTarget(), word.getExplain()
+            );
+        }
+    }
+}

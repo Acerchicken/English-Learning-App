@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-import static com.example.dictionary.Models.Dictionary.words;
+import static com.example.dictionary.Models.Dictionary.getWords;
 
 
 public class Game extends Application {
@@ -15,12 +15,12 @@ public class Game extends Application {
         Map<String, String> randomListWord = new HashMap<String, String>();
         getDic().importFromFile();
         Random random = new Random();
-        int size = words.size();
+        int size = getWords().size();
         while (randomListWord.size() < n) {
             int randomIndex = random.nextInt(Math.abs(size));
-            String randomElement = words.get(randomIndex).getTarget().replace(" ", "").replace("'","").replace("-", "").toUpperCase();
+            String randomElement = getWords().get(randomIndex).getTarget().replace(" ", "").replace("'","").replace("-", "").toUpperCase();
             if (randomElement.length() >= 2 && randomElement.length() <= length && !randomListWord.containsValue(randomElement)) {
-                randomListWord.put(randomElement,words.get(randomIndex).getTarget());
+                randomListWord.put(randomElement,getWords().get(randomIndex).getTarget());
             }
         }
         return randomListWord;

@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class DictionaryCommandline {
     private final DictionaryManagement dicManage = new DictionaryManagement();
 
-    public void dictionaryAdvanced(){
+    public void dictionaryAdvanced() {
         Scanner scanner = new Scanner(System.in);
-        while (true){
+        while (true) {
             System.out.println("----------------------------");
             System.out.println("|Welcome to My Application!|");
             System.out.println("| [0] Exit                 |");
@@ -34,7 +34,7 @@ public class DictionaryCommandline {
                 continue;
             }
 
-            switch (choice){
+            switch (choice) {
                 case 0:
                     System.out.println("Exiting...");
                     System.exit(0);
