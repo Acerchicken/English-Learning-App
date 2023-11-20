@@ -8,12 +8,12 @@
 <AnchorPane fx:id="mainGamePane" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #A7D397;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.Controllers.GameController">
    <children>
       <Label fx:id="meaning" alignment="TOP_LEFT" layoutX="14.0" layoutY="244.0" prefHeight="296.0" prefWidth="362.0" style="-fx-background-color: #F5EEC8;" />
-      <ListView fx:id="winList" layoutX="14.0" layoutY="104.0" prefHeight="128.0" prefWidth="259.0" style="-fx-background-color: #F5EEC8;" />
-      <Label alignment="CENTER" layoutX="14.0" layoutY="49.0" prefHeight="38.0" prefWidth="259.0" style="-fx-font-weight: bold; -fx-background-color: #495E57;" text="List Word" textFill="WHITE" />
-      <Label fx:id="statusText" alignment="CENTER" contentDisplay="CENTER" layoutX="289.0" layoutY="49.0" prefHeight="38.0" prefWidth="86.0" style="-fx-font-weight: bold; -fx-background-color: #495E57;" text="Find word" textFill="WHITE" />
-      <Label fx:id="questionLabel" alignment="TOP_LEFT" layoutX="289.0" layoutY="104.0" prefHeight="128.0" prefWidth="86.0" style="-fx-background-color: #F5EEC8;" />
-      <Button fx:id="controlGame" alignment="CENTER" layoutX="775.0" layoutY="14.0" mnemonicParsing="false" onAction="#control" prefHeight="26.0" prefWidth="118.0" style="-fx-font-weight: bold; -fx-background-color: #495E57;" text="Play" textFill="WHITE" />
-      <Button fx:id="resetButton" alignment="CENTER" layoutX="672.0" layoutY="14.0" mnemonicParsing="false" onAction="#reset" prefHeight="26.0" prefWidth="78.0" style="-fx-font-weight: bold; -fx-background-color: #495E57;" text="Reset" textFill="WHITE" />
-      <Label fx:id="infoLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="420.0" layoutY="14.0" prefHeight="26.0" prefWidth="226.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="Select a line on the board!!" textFill="WHITE" />
+      <ListView fx:id="winList" layoutX="14.0" layoutY="114.0" prefHeight="117.0" prefWidth="259.0" style="-fx-background-color: #F5EEC8;" />
+      <Label alignment="CENTER" layoutX="14.0" layoutY="60.0" prefHeight="38.0" prefWidth="259.0" style="-fx-font-weight: bold; -fx-background-color: #495E57;" text="List Word" textFill="WHITE" />
+      <Label fx:id="statusText" alignment="CENTER" contentDisplay="CENTER" layoutX="289.0" layoutY="60.0" prefHeight="38.0" prefWidth="86.0" style="-fx-font-weight: bold; -fx-background-color: #495E57;" text="Find word" textFill="WHITE" />
+      <Label fx:id="questionLabel" alignment="TOP_LEFT" layoutX="289.0" layoutY="114.0" prefHeight="118.0" prefWidth="86.0" style="-fx-background-color: #F5EEC8;" />
+      <Button fx:id="controlGame" alignment="CENTER" layoutX="762.0" layoutY="14.0" mnemonicParsing="false" onAction="#control" prefHeight="26.0" prefWidth="118.0" style="-fx-font-weight: bold; -fx-background-color: #495E57;" text="Play" textFill="WHITE" />
+      <Button fx:id="resetButton" alignment="CENTER" layoutX="655.0" layoutY="14.0" mnemonicParsing="false" onAction="#reset" prefHeight="26.0" prefWidth="78.0" style="-fx-font-weight: bold; -fx-background-color: #495E57;" text="Reset" textFill="WHITE" />
+      <Label fx:id="infoLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="400.0" layoutY="14.0" prefHeight="26.0" prefWidth="226.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="Select a line on the board!!" textFill="WHITE" />
    </children>
 </AnchorPane>

@@ -88,7 +88,7 @@ public class GameController extends Game implements Initializable {
         boardPane = new GridPane();
         boardPane.setMinSize(size, size);
         boardPane.setMaxSize(size, size);
-        boardPane.setLayoutX(900 - SIZE);
+        boardPane.setLayoutX(880 - SIZE);
         boardPane.setLayoutY((double) (600 - SIZE) / 2);
         boardButtons = new Button[GRIDSIZE][GRIDSIZE];
         boardPane.setDisable(true);
