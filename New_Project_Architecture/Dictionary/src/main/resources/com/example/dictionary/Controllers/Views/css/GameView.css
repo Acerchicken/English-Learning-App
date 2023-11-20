@@ -7,3 +7,9 @@
 .choice-box .context-menu {
     -fx-background-color:  #495E57;
 }
+
+.list-view .label {
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+}
+

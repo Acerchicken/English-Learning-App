@@ -46,7 +46,7 @@ public class GameController extends Game implements Initializable {
     @FXML
     private ListView<String> winList;
     @FXML
-    private Label meaning;
+    private TextArea meaning;
     @FXML
     private Label questionLabel;
     @FXML
@@ -63,6 +63,7 @@ public class GameController extends Game implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        meaning.setEditable(false);
         difficulty.getItems().addAll(DIFFICULTY);
         difficulty.setValue("Easy");
         difficulty.setOnAction(this::chooseDifficulty);

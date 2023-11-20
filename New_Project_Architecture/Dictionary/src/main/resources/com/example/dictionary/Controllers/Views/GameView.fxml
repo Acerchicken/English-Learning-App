@@ -4,11 +4,11 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane fx:id="mainGamePane" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #A7D397;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.Controllers.GameController">
    <children>
-      <Label fx:id="meaning" alignment="TOP_LEFT" layoutX="14.0" layoutY="244.0" prefHeight="296.0" prefWidth="362.0" style="-fx-background-color: #F5EEC8;" />
       <ListView fx:id="winList" layoutX="14.0" layoutY="114.0" prefHeight="117.0" prefWidth="259.0" style="-fx-background-color: #F5EEC8;" />
       <Label alignment="CENTER" layoutX="14.0" layoutY="60.0" prefHeight="38.0" prefWidth="259.0" style="-fx-font-weight: bold; -fx-background-color: #495E57;" text="List Word" textFill="WHITE" />
       <Label fx:id="statusText" alignment="CENTER" contentDisplay="CENTER" layoutX="289.0" layoutY="60.0" prefHeight="38.0" prefWidth="86.0" style="-fx-font-weight: bold; -fx-background-color: #495E57;" text="Find word" textFill="WHITE" />
@@ -19,5 +19,6 @@
       <Button fx:id="backButton" alignment="CENTER" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#back" prefHeight="26.0" prefWidth="78.0" style="-fx-font-weight: bold; -fx-background-color: #495E57;" text="Back" textFill="WHITE" />
       <ChoiceBox fx:id="difficulty" layoutX="257.0" layoutY="14.0" prefHeight="26.0" prefWidth="118.0" style="-fx-background-color: #495E57;" stylesheets="@css/GameView.css" />
       <Label fx:id="difficultyLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="163.0" layoutY="14.0" prefHeight="26.0" prefWidth="86.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="Difficulty" textFill="WHITE" />
+      <TextArea fx:id="meaning" layoutX="14.0" layoutY="244.0" prefHeight="296.0" prefWidth="362.0" />
    </children>
 </AnchorPane>
