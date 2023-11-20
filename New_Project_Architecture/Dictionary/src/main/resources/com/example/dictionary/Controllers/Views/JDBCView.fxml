@@ -18,6 +18,6 @@
             <TextFlow fx:id="EnglishDefinition" prefHeight="413.0" prefWidth="394.0" style="-fx-background-color: #F5EEC8;" />
          </content>
       </ScrollPane>
-      <Button fx:id="removeButton" layoutX="768.0" layoutY="55.0" mnemonicParsing="false" onAction="#removeWordController" prefHeight="51.0" prefWidth="76.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="Back" textFill="WHITE" />
+      <Button fx:id="removeButton" layoutX="768.0" layoutY="55.0" mnemonicParsing="false" onAction="#removeWordController" prefHeight="51.0" prefWidth="76.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="Remove" textFill="WHITE" />
    </children>
 </AnchorPane>
