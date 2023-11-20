@@ -12,7 +12,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
-import javafx.scene.text.Font;
 
 import java.net.URL;
 import java.util.Map;
@@ -46,9 +45,12 @@ public class GameController extends Game implements Initializable {
     @FXML
     private Label questionLabel;
     @FXML
-    private Button play;
+    private Button controlGame;
+    @FXML
+    private Label infoLabel;
 
     private boolean winStatus;
+
 
 
     @Override
@@ -57,6 +59,8 @@ public class GameController extends Game implements Initializable {
     }
 
     public void startGame(int size) {
+        String chooseWordStyle = "-fx-background-color: #2D9596;-fx-font-weight: bold; -fx-font-size: 24 - GRIDSIZE;";
+        String boardStyle = "-fx-background-color: #ECF4D6;-fx-font-weight: bold; -fx-font-size: 24 - GRIDSIZE;";
         winStatus = false;
         Game game = new Game();
         wordMap = game.randomPickWord(3, 7);
@@ -92,8 +96,7 @@ public class GameController extends Game implements Initializable {
             for (int j = 0; j < GRIDSIZE; j++) {
                 boardButtons[j][i] = new Button("Button #" + (j + i * GRIDSIZE + 1));
                 boardButtons[j][i].setMinSize((double) size / GRIDSIZE, (double) size / GRIDSIZE);
-                boardButtons[j][i].setFont(new Font(25 - GRIDSIZE));
-                boardButtons[j][i].setStyle("-fx-background-color: yellow; -fx-font-weight: bold;");
+                boardButtons[j][i].setStyle(boardStyle);
                 boardPane.setGridLinesVisible(false);
             }
         }
@@ -102,6 +105,8 @@ public class GameController extends Game implements Initializable {
                 int finalI = i;
                 int finalJ = j;
                 boardButtons[j][i].setOnMouseEntered(event -> {
+                    infoLabel.setText("Select a line on the board!!");
+                    infoLabel.setStyle("-fx-background-color:  #495E57;-fx-font-weight: bold;");
                     int rowIndex = GridPane.getRowIndex(boardButtons[finalJ][finalI]);
                     int columnIndex = GridPane.getColumnIndex(boardButtons[finalJ][finalI]);
                     if (status) {
@@ -110,13 +115,13 @@ public class GameController extends Game implements Initializable {
                                 res = new StringBuilder("");
                                 for (int k = firstPointY; k <= columnIndex; k++) {
                                     res.append(boardButtons[k][rowIndex].getText());
-                                    boardButtons[k][rowIndex].setStyle("-fx-background-color: green;-fx-font-weight: bold;");
+                                    boardButtons[k][rowIndex].setStyle(chooseWordStyle);
                                 }
                             } else {
                                 res = new StringBuilder("");
                                 for (int k = firstPointY; k >= columnIndex; k--) {
                                     res.append(boardButtons[k][rowIndex].getText());
-                                    boardButtons[k][rowIndex].setStyle("-fx-background-color: green;-fx-font-weight: bold;");
+                                    boardButtons[k][rowIndex].setStyle(chooseWordStyle);
                                 }
                             }
                         } else if (columnIndex == firstPointY) {
@@ -124,13 +129,13 @@ public class GameController extends Game implements Initializable {
                                 res = new StringBuilder("");
                                 for (int k = firstPointX; k <= rowIndex; k++) {
                                     res.append(boardButtons[columnIndex][k].getText());
-                                    boardButtons[columnIndex][k].setStyle("-fx-background-color: green;-fx-font-weight: bold;");
+                                    boardButtons[columnIndex][k].setStyle(chooseWordStyle);
                                 }
                             } else {
                                 res = new StringBuilder("");
                                 for (int k = firstPointX; k >= rowIndex; k--) {
                                     res.append(boardButtons[columnIndex][k].getText());
-                                    boardButtons[columnIndex][k].setStyle("-fx-background-color: green;-fx-font-weight: bold;");
+                                    boardButtons[columnIndex][k].setStyle(chooseWordStyle);
                                 }
                             }
                         } else if (Math.abs(rowIndex - firstPointX) == Math.abs(columnIndex - firstPointY)) {
@@ -139,13 +144,13 @@ public class GameController extends Game implements Initializable {
                                     res = new StringBuilder("");
                                     for (int k = 0; k <= rowIndex - firstPointX; k++) {
                                         res.append(boardButtons[firstPointY + k][firstPointX + k].getText());
-                                        boardButtons[firstPointY + k][firstPointX + k].setStyle("-fx-background-color: green;-fx-font-weight: bold;");
+                                        boardButtons[firstPointY + k][firstPointX + k].setStyle(chooseWordStyle);
                                     }
                                 } else {
                                     res = new StringBuilder("");
                                     for (int k = 0; k <= rowIndex - firstPointX; k++) {
                                         res.append(boardButtons[firstPointY - k][firstPointX + k].getText());
-                                        boardButtons[firstPointY - k][firstPointX + k].setStyle("-fx-background-color: green;-fx-font-weight: bold;");
+                                        boardButtons[firstPointY - k][firstPointX + k].setStyle(chooseWordStyle);
                                     }
                                 }
                             } else {
@@ -153,40 +158,40 @@ public class GameController extends Game implements Initializable {
                                     res = new StringBuilder("");
                                     for (int k = firstPointX - rowIndex; k >= 0; k--) {
                                         res.append(boardButtons[firstPointY + k][firstPointX - k].getText());
-                                        boardButtons[firstPointY + k][firstPointX - k].setStyle("-fx-background-color: green;-fx-font-weight: bold;");
+                                        boardButtons[firstPointY + k][firstPointX - k].setStyle(chooseWordStyle);
                                     }
                                 } else {
                                     res = new StringBuilder("");
                                     for (int k = firstPointX - rowIndex; k >= 0; k--) {
                                         res.append(boardButtons[firstPointY - k][firstPointX - k].getText());
-                                        boardButtons[firstPointY - k][firstPointX - k].setStyle("-fx-background-color: green;-fx-font-weight: bold;");
+                                        boardButtons[firstPointY - k][firstPointX - k].setStyle(chooseWordStyle);
                                     }
                                 }
                             }
                         } else {
                             for (int k = 0; k < GRIDSIZE; k++) {
                                 for (int l = 0; l < GRIDSIZE; l++) {
-                                    boardButtons[l][k].setStyle("-fx-background-color: yellow; -fx-font-weight: bold;");
+                                    boardButtons[l][k].setStyle(boardStyle);
                                 }
                             }
-                            boardButtons[firstPointY][firstPointX].setStyle("-fx-background-color: green;-fx-font-weight: bold;");
+                            boardButtons[firstPointY][firstPointX].setStyle(chooseWordStyle);
                         }
                     }
                 });
                 boardButtons[j][i].setOnMouseExited(event -> {
-                    boardButtons[finalJ][finalI].setStyle("-fx-background-color: yellow; -fx-font-weight: bold;");
+                    boardButtons[finalJ][finalI].setStyle(boardStyle);
                 });
-                boardButtons[j][i].setOnMouseClicked(event -> {
+                boardButtons[j][i].setOnMousePressed(event -> {
                     if (!status) {
                         status = true;
                         firstPointX = GridPane.getRowIndex(boardButtons[finalJ][finalI]);
                         firstPointY = GridPane.getColumnIndex(boardButtons[finalJ][finalI]);
                         for (int k = 0; k < GRIDSIZE; k++) {
                             for (int l = 0; l < GRIDSIZE; l++) {
-                                boardButtons[l][k].setStyle("-fx-background-color: yellow; -fx-font-weight: bold;");
+                                boardButtons[l][k].setStyle(boardStyle);
                             }
                         }
-                        boardButtons[firstPointY][firstPointX].setStyle("-fx-background-color: green;-fx-font-weight: bold;");
+                        boardButtons[firstPointY][firstPointX].setStyle(chooseWordStyle);
                     }
                     else {
                         status = false;
@@ -197,18 +202,26 @@ public class GameController extends Game implements Initializable {
                             meaning.setText(String.valueOf(wordExplain));
                             wordMap.remove(res.toString());
                             wordMap.remove(res.reverse().toString());
+                            infoLabel.setText("True");
+                            infoLabel.setStyle("-fx-background-color: green; -fx-font-weight: bold;");
                         }
                         else {
                             System.out.println("WRONG");
+                            infoLabel.setText("Wrong");
+                            infoLabel.setStyle("-fx-background-color: red; -fx-font-weight: bold;");
                         }
                         if (wordMap.isEmpty()) {
+                            infoLabel.setText("You Win");
+                            infoLabel.setStyle("-fx-background-color: red; -fx-font-weight: bold;");
                             System.out.println("you win the game");
+                            controlGame.setText("New Game");
+                            infoLabel.setStyle("-fx-background-color: yellow; -fx-font-weight: bold;");
                             boardPane.setDisable(true);
                             winStatus = true;
                         }
                         for (int k = 0; k < GRIDSIZE; k++) {
                             for (int l = 0; l < GRIDSIZE; l++) {
-                                boardButtons[l][k].setStyle("-fx-background-color: yellow; -fx-font-weight: bold;");
+                                boardButtons[l][k].setStyle(boardStyle);
                             }
                         }
                     }
@@ -226,15 +239,22 @@ public class GameController extends Game implements Initializable {
     }
 
     public void control(ActionEvent event) {
-        if (boardPane.isDisable()) {
+        if (winStatus) {
+            reset(event);
             boardPane.setDisable(false);
+        }
+        else if (boardPane.isDisable()) {
+            boardPane.setDisable(false);
+            controlGame.setText("Pause");
         }
         else {
             boardPane.setDisable(true);
+            controlGame.setText("Continue");
         }
-        if (winStatus) {
-            startGame(SIZE);
-            boardPane.setDisable(false);
-        }
+    }
+
+    public void reset(ActionEvent event) {
+        boardPane.getChildren().clear();
+        startGame(SIZE);
     }
 }
