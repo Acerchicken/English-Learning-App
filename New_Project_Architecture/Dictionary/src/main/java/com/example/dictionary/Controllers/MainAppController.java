@@ -55,7 +55,7 @@ public class MainAppController extends Application implements Initializable {
     private Stage stage;
     private Scene scene;
     private final AlertController alertController = new AlertController();
-     private Voice voice;
+    private Voice voice;
 
     public static String getWordTarget() {
         return wordTarget;
