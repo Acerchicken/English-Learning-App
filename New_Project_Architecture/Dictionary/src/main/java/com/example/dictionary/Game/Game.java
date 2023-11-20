@@ -1,33 +1,32 @@
 package com.example.dictionary.Game;
 
 import com.example.dictionary.Application;
-import com.example.dictionary.Models.Word;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 import static com.example.dictionary.Models.Dictionary.words;
 
 
 public class Game extends Application {
-    private ArrayList<Word> saveWordList = new ArrayList<>();
-    public ArrayList<String> randomPickWord(int n) {
-        ArrayList<String> randomListWord = new ArrayList<>();
+    public Map<String, String> randomPickWord(int n, int length) {
+        Map<String, String> randomListWord = new HashMap<String, String>();
         getDic().importFromFile();
         Random random = new Random();
         int size = words.size();
         while (randomListWord.size() < n) {
             int randomIndex = random.nextInt(Math.abs(size));
-            String randomElement = words.get(randomIndex).getTarget().replace(" ", "").replace("'","").replace("-", "");
-            if (!randomListWord.contains(randomElement)) {
-                randomListWord.add(randomElement);
-                saveWordList.add(words.get(randomIndex));
+            String randomElement = words.get(randomIndex).getTarget().replace(" ", "").replace("'","").replace("-", "").toUpperCase();
+            if (randomElement.length() >= 2 && randomElement.length() <= length && !randomListWord.containsValue(randomElement)) {
+                randomListWord.put(randomElement,words.get(randomIndex).getTarget());
             }
         }
         return randomListWord;
     }
 
-    public char[][] createGameBoard(ArrayList<String> randomListWord, int gridSize) {
+    public char[][] createGameBoard(Map<String, String> randomMapWord, int gridSize) {
         // Step
         int stepX;
         int stepY;
@@ -44,7 +43,7 @@ public class Game extends Application {
             }
         }
         String[] orientations = {"left-right", "up-down", "diagonalup", "diagonaldown"};
-        for (String word : randomListWord) {
+        for (String word : randomMapWord.keySet()) {
             int wordTargetLength = word.length();
             boolean placed = false;
             while (!placed) {
@@ -115,15 +114,24 @@ public class Game extends Application {
                 }
             }
         }
+        for (int i = 0; i < gridSize; i++) {
+            for (int j = 0; j < gridSize; j++) {
+                if (board[i][j] == '_') {
+                    Random random = new Random();
+                    char c = (char) (random.nextInt(26) + 'A');
+                    board[i][j] = c;
+                }
+            }
+        }
         return board;
     }
 
     public static void main(String[] args) {
         Game g = new Game();
-        ArrayList<String> wordList = g.randomPickWord(3);
-        char[][] gameBoard = g.createGameBoard(wordList, 20);
-        for (int i = 0; i < wordList.size(); i++) {
-            System.out.println(wordList.get(i));
+        Map<String, String> wordList = g.randomPickWord(4, 7);
+        char[][] gameBoard = g.createGameBoard(wordList, 13);
+        for (String s : wordList.keySet()) {
+            System.out.println(s);
         }
         for (int i = 0; i < gameBoard.length; i++) {
             for (int j = 0; j < gameBoard.length; j++) {
