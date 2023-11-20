@@ -292,18 +292,21 @@ public class GameController extends Game implements Initializable {
                 boardPane.getChildren().clear();
                 gridSize = 6;
                 questionNumber = 2;
+                controlGame.setText("Play");
                 startGame(SIZE, gridSize, questionNumber);
             }
             case "Medium" -> {
                 boardPane.getChildren().clear();
                 gridSize = 8;
                 questionNumber = 3;
+                controlGame.setText("Play");
                 startGame(SIZE, gridSize, questionNumber);
             }
             case "Hard" -> {
                 boardPane.getChildren().clear();
                 gridSize = 10;
                 questionNumber = 4;
+                controlGame.setText("Play");
                 startGame(SIZE, gridSize, questionNumber);
             }
         }
