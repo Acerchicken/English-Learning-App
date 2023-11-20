@@ -15,5 +15,6 @@
       <Button fx:id="controlGame" alignment="CENTER" layoutX="762.0" layoutY="14.0" mnemonicParsing="false" onAction="#control" prefHeight="26.0" prefWidth="118.0" style="-fx-font-weight: bold; -fx-background-color: #495E57;" text="Play" textFill="WHITE" />
       <Button fx:id="resetButton" alignment="CENTER" layoutX="655.0" layoutY="14.0" mnemonicParsing="false" onAction="#reset" prefHeight="26.0" prefWidth="78.0" style="-fx-font-weight: bold; -fx-background-color: #495E57;" text="Reset" textFill="WHITE" />
       <Label fx:id="infoLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="400.0" layoutY="14.0" prefHeight="26.0" prefWidth="226.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" text="Select a line on the board!!" textFill="WHITE" />
+      <Button fx:id="backButton" alignment="CENTER" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#back" prefHeight="26.0" prefWidth="78.0" style="-fx-font-weight: bold; -fx-background-color: #495E57;" text="Back" textFill="WHITE" />
    </children>
 </AnchorPane>
