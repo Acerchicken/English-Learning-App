@@ -7,21 +7,21 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #A7D397;" stylesheets="@css/UpdateView.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.Controllers.UpdateController">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #A7D397;" stylesheets="@css/MainAppView.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.Controllers.UpdateController">
     <children>
-        <TextField fx:id="wordTextField" layoutX="223.0" layoutY="41.0" prefHeight="43.0" prefWidth="548.0" style="-fx-background-color: #F5EEC8;" stylesheets="@css/UpdateView.css" />
-        <Label alignment="CENTER" layoutX="128.0" layoutY="41.0" prefHeight="43.0" prefWidth="94.0" style="-fx-font-weight: bold; -fx-background-color: #495E57;" stylesheets="@css/UpdateView.css" text="Word" textAlignment="CENTER" textFill="WHITE">
+        <TextField fx:id="wordTextField" layoutX="223.0" layoutY="41.0" prefHeight="43.0" prefWidth="548.0" style="-fx-background-color: #F5EEC8;" stylesheets="@css/MainAppView.css" />
+        <Label alignment="CENTER" layoutX="128.0" layoutY="41.0" prefHeight="43.0" prefWidth="94.0" style="-fx-font-weight: bold; -fx-background-color: #495E57;" stylesheets="@css/MainAppView.css" text="Word" textAlignment="CENTER" textFill="WHITE">
             <font>
                 <Font size="23.0" />
             </font>
         </Label>
-        <Label alignment="CENTER" layoutX="128.0" layoutY="116.0" prefHeight="386.0" prefWidth="94.0" style="-fx-font-weight: bold; -fx-background-color: #495E57;" stylesheets="@css/UpdateView.css" text="Explain" textFill="WHITE">
+        <Label alignment="CENTER" layoutX="128.0" layoutY="116.0" prefHeight="386.0" prefWidth="94.0" style="-fx-font-weight: bold; -fx-background-color: #495E57;" stylesheets="@css/MainAppView.css" text="Explain" textFill="WHITE">
             <font>
                 <Font size="23.0" />
             </font>
         </Label>
-        <Button fx:id="updateButton" layoutX="128.0" layoutY="516.0" mnemonicParsing="false" onAction="#update" prefHeight="43.0" prefWidth="643.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" stylesheets="@css/UpdateView.css" text="Update" textFill="WHITE" />
-        <Button fx:id="backButton" layoutX="807.0" layoutY="7.0" mnemonicParsing="false" onAction="#switchToAppScene" prefHeight="43.0" prefWidth="86.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" stylesheets="@css/UpdateView.css" text="Back" textFill="WHITE" />
-      <TextArea fx:id="wordExplainTextArea" layoutX="223.0" layoutY="116.0" prefHeight="386.0" prefWidth="548.0" style="-fx-background-color: #F5EEC8;" stylesheets="@css/UpdateView.css" />
+        <Button fx:id="updateButton" layoutX="128.0" layoutY="516.0" mnemonicParsing="false" onAction="#update" prefHeight="43.0" prefWidth="643.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" stylesheets="@css/MainAppView.css" text="Update" textFill="WHITE" />
+        <Button fx:id="backButton" layoutX="807.0" layoutY="7.0" mnemonicParsing="false" onAction="#switchToAppScene" prefHeight="43.0" prefWidth="86.0" style="-fx-background-color: #495E57; -fx-font-weight: bold;" stylesheets="@css/MainAppView.css" text="Back" textFill="WHITE" />
+      <TextArea fx:id="wordExplainTextArea" layoutX="223.0" layoutY="116.0" prefHeight="386.0" prefWidth="548.0" style="-fx-background-color: #F5EEC8;" stylesheets="@css/MainAppView.css" />
     </children>
 </AnchorPane>
