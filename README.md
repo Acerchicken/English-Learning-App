@@ -1,14 +1,15 @@
-** English-Learning-App**
-#DỰ ÁN BÀI TẬP LỚN MÔN OOP
+# English-Learning-App
+
+##DỰ ÁN BÀI TẬP LỚN MÔN OOP
 
 -------------------------------
-##Thành viên##:
+##Thành viên:
 - 22025518_Pham Xuan Duong
 - 22025501_Do Tri Dung
 - 22025509_Tran Duc Anh
 
 -------------------------------
-##Tiêu chí##:
+##Tiêu chí:
 - ✅ Thiết kế cây thừa kế cho các đối tượng.
 - ✅ Cài đặt được chức năng thêm sửa xóa từ mới.
 - ✅ Đọc được dữ liệu từ file hoặc CSDL.
